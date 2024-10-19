@@ -1,0 +1,18 @@
+{
+    "name": "Admin Page",
+    "webElements": [
+        {
+            "elementValue": "adminmenu",
+            "selectorValue": ".oxd-main-menu-item"
+        },
+        {
+            "elementValue": "empAddButton",
+            "selectorValue": ".oxd-button"
+        },
+        {
+            "elementValue": "userRoleSelectOptions",
+            "selectorValue": ".oxd-select-wrapper"
+        }
+
+    ]
+}

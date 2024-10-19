@@ -1,0 +1,19 @@
+[{
+    
+    "username" : "Admin",
+    "password" : "admin123",
+    "firstName" : "Robert James",
+    "middleName" : "Chen",
+    "lastName" : "Schneider", 
+    "empID" : "1209"
+},
+{
+    "username" : "Admin",
+    "password" : "admin123",
+    "firstName" : "Ronaldo",
+    "middleName" : "Valdez",
+    "lastName" : "Gibbs", 
+    "empID" : "2309"
+}
+]
+

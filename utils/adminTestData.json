@@ -1,0 +1,19 @@
+[
+{
+    "username" : "Admin",
+    "password" : "admin123",
+    "EmpName" : "Robert James",
+    "UserName" : "Dranreb",
+    "Password" : "D3vT3$t3rR0l305", 
+    "ConfirmPassword" : "D3vT3$t3rR0l305"
+
+},
+{
+    "username" : "Admin",
+    "password" : "admin123",
+    "EmpName" : "Robert James",
+    "UserName" : "Jessie",
+    "Password" : "PerfT3st3rR0l369", 
+    "ConfirmPassword" : "PerfT3st3rR0l369"
+}
+]
