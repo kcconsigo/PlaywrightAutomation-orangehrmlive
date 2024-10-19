@@ -36,8 +36,7 @@ exports.LoginPage = class LoginPage{
     }
     async validateInvalidMessage()
     {
-        const errorMessage =err_msg;
-        await expect(errorMessage).toHaveText('Invalid credentials');
+        await expect(err_msg).toHaveText('Invalid credentials');
     }
 
     // enterUsername(){
