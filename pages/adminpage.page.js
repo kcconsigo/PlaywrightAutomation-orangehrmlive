@@ -59,22 +59,22 @@ constructor(page){
     console.log(await this.successfullyMsg.textContent());
     await this.page.waitForTimeout(5000);
   }
-  async verifyAdmin(UserName){
-    // await page.getByTestId('scrolling-container').hover();
-    // await page.mouse.wheel(5, 10);
-    // await this.scolldownAdminInfo.scrollIntoViewIfNeeded();
-    const adminNameList = this.adminList;
-    const adminAddedNameList = this.page.locator('//div[contains(text(),'+UserName+')]');
-    for(let i = 0; i<await adminNameList.count(); i++)
-    {
-      const rowadminName = await adminNameList.nth(i).textContent();
-      if(adminAddedNameList.isVisible(rowadminName))
-      {
-          await adminNameList.nth(i).locator("button").click();
-          break;
-      }
-    }
-    await this.page.waitForTimeout(5000);
-  }
+  // async verifyAdmin(UserName){
+  //   // await page.getByTestId('scrolling-container').hover();
+  //   // await page.mouse.wheel(5, 10);
+  //   // await this.scolldownAdminInfo.scrollIntoViewIfNeeded();
+  //   const adminNameList = this.adminList;
+  //   const adminAddedNameList = this.page.locator('//div[contains(text(),'+UserName+')]');
+  //   for(let i = 0; i<await adminNameList.count(); i++)
+  //   {
+  //     const rowadminName = await adminNameList.nth(i).textContent();
+  //     if(adminAddedNameList.isVisible(rowadminName))
+  //     {
+  //         await adminNameList.nth(i).locator("button").click();
+  //         break;
+  //     }
+  //   }
+  //   await this.page.waitForTimeout(5000);
+  // }
 
 }
