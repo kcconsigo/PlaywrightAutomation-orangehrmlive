@@ -4,6 +4,7 @@ const { AdminPage } = require('../pages/adminpage.page');
 const { AdminPageDashboard } = require('../pages/adminpagedashboard.page');
 //JSON->string->js object
 const dataSetLiveDemo = JSON.parse(JSON.stringify(require("../utils/loginTestData.json")));
+const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidloginTestData.json")));
 
 
 test.beforeEach('Orange live demo app', async ({page}) => {
@@ -43,5 +44,16 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
 
         
     });
+    test('should not be able to login when user enters invalid credentials', async ({ page })=>{
+
+      const invalidloginpage = new LoginPage(page);
+      await page.waitForTimeout(2000);
+      await invalidloginpage.gotoLoginPage()
+      await invalidloginpage.loginCreds(negativeDataSet.username, negativeDataSet.password)
+      await invalidloginpage.clickLoginBtn()
+      await invalidloginpage.validateInvalidMessage()
+      await page.waitForTimeout(5000);
+      
+  });
     
 })
