@@ -49,7 +49,7 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
       const invalidloginpage = new LoginPage(page);
       await page.waitForTimeout(2000);
       await invalidloginpage.gotoLoginPage()
-      await invalidloginpage.loginCreds(negativeDataSet.username, negativeDataSet.password)
+      await invalidloginpage.loginCreds(negativeDataSet.usernameInvalid, negativeDataSet.passwordInvalid)
       await invalidloginpage.clickLoginBtn()
       await invalidloginpage.validateInvalidMessage()
       await page.waitForTimeout(5000);
