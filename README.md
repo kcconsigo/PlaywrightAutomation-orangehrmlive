@@ -7,7 +7,7 @@ This automation framework adds **Admin** and **Employee**, Edit Employee's Infor
 
 Technology Stacks used: VS Code for IDE 
 
-Javascript for programming language
+Javascript for programming language and Gherkin Syntax for BDD approach
 
 GitHub as for code repository(also planning to add to bitbucket)
 
