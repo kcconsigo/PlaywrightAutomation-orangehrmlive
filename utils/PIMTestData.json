@@ -14,6 +14,22 @@
     "middleName" : "Valdez",
     "lastName" : "Gibbs", 
     "empID" : "2309"
+},
+{
+    "username" : "Admin",
+    "password" : "admin123",
+    "firstName" : "Jose",
+    "middleName" : "Rizal",
+    "lastName" : "Realonda", 
+    "empID" : "1083"
+},
+{
+    "username" : "Admin",
+    "password" : "admin123",
+    "firstName" : "Andy",
+    "middleName" : "Tak-wah",
+    "lastName" : "lau", 
+    "empID" : "1083"
 }
 ]
 
