@@ -1,6 +1,6 @@
 This is my Playwright Project
 
-Project Name: demo.orangehrmlive-Playwright Project End to End test built in Page Object Model
+**Project Name:** demo.orangehrmlive-Playwright Project End to End test built in Page Object Model
 
 
 This automation framework adds Admin and Employee, Edit Employee's Information and Delete the Employee's Information
