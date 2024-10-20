@@ -22,3 +22,5 @@ CICD - Jenkins
 Reporting - Test Runner via cucumber and Allure Report 
 
 Docker Containerization for the orchestration.
+
+**Clone Project** : **https://github.com/kcconsigo/PlaywrightAutomation-orangehrmlive.git**
