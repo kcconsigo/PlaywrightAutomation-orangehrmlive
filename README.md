@@ -17,9 +17,11 @@ GitHub as for code repository(also planning to add to bitbucket)
 
 CI - GitHub actions via yaml 
 
-CICD - Jenkins 
+CICD - Jenkins, CircleCI 
 
 Reporting - Test Runner via cucumber and Allure Report 
+
+Monitoring and Logs - Grafana Dashbaord
 
 Docker Containerization for the orchestration.
 
