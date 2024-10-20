@@ -24,3 +24,20 @@ Reporting - Test Runner via cucumber and Allure Report
 Docker Containerization for the orchestration.
 
 **Clone Project** : **https://github.com/kcconsigo/PlaywrightAutomation-orangehrmlive.git**
+
+Setup and Installation:
+* ![image](https://github.com/user-attachments/assets/701e07ad-ca3d-45d8-a08c-485c83fc4665)
+* ![image](https://github.com/user-attachments/assets/dee6e874-dc7f-4c87-b4f1-1f222bad7469)
+* ![image](https://github.com/user-attachments/assets/3a7f4103-75f6-4c57-ae2c-5c3dbdafb01e)
+* ![image](https://github.com/user-attachments/assets/14ec7af1-1eee-42e2-b81c-9379f4fa1578)
+Also you can use if you want to run your application via web browser
+![image](https://github.com/user-attachments/assets/8dcf015f-7762-4239-8554-e966cca297da)
+* ![image](https://github.com/user-attachments/assets/17462e49-73f7-44cd-8547-79082cfd9acb)
+* ![image](https://github.com/user-attachments/assets/4d4310c1-ed6c-43f8-909b-df2b5eab18e2)
+
+
+
+
+
+
+
