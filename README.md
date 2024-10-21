@@ -15,6 +15,8 @@ Javascript for programming language and Gherkin Syntax for BDD approach
 
 GitHub as for code repository(also planning to add to bitbucket)
 
+I've also added my project to my Bitbucket repository : https://bitbucket.org/testautomationframework1/orangehrmlive_testautomation/src/main/
+
 CI - GitHub actions via yaml 
 
 CICD - Jenkins, CircleCI 
