@@ -1,0 +1,3 @@
+[submodule "PlaywrightAutomation-orangehrmlive"]
+	path = PlaywrightAutomation-orangehrmlive
+	url = https://github.com/kcconsigo/PlaywrightAutomation-orangehrmlive.git

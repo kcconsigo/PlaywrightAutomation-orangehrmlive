@@ -26,22 +26,7 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
         await loginpage.loginCreds(dataSetLiveDemo.username, dataSetLiveDemo.password)
         await loginpage.clickLoginBtn()
         await page.waitForTimeout(5000);
-
-        // const adminpage = new AdminPage(page);
-        // await adminpage.AdminTab();
-        // await adminpage.selectUserRoleAndUserStatus();
-        // await adminpage.createNewEmployeeInputTextFields('Francesco Corrado', 'Ronaldo Valdez','D3vT3$t3rR0l305','D3vT3$t3rR0l305');
-        // await adminpage.clickSavebtn();
-
-        // const adminpagedashboard = new AdminPageDashboard(page);
-        // await adminpagedashboard.adminpageDashboard();
-        // await page.waitForTimeout(2000);
-        // await adminpagedashboard.systemuserFilter();
-        // await adminpagedashboard.recordsfoundList();
-        // await adminpagedashboard.edituserInfoPage('Ronaldo Valdez Gibbs');
-        // await adminpagedashboard.deleteuserInfo();
-
-        
+       
     });
     test('should not be able to login when user enters invalid credentials', async ({ page })=>{
 
