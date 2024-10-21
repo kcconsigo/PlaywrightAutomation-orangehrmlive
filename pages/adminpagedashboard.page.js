@@ -36,47 +36,32 @@ exports.AdminPageDashboard = class AdminPageDashboard{
     async systemuserFilter(){
         await this.systemUser.nth(1).click();
         await this.systemUser.nth(1).fill('Ronaldo Valdez');
-        await this.page.waitForTimeout(2000);
         await this.systemUserSearchbtn.click();
-        await this.page.waitForTimeout(1000);
     }
 
     async recordsfoundList(){
         await this.recordCheckbox.nth(1).click();
-        await this.page.waitForTimeout(2000);
         await this.systemUserEditInfobtn.click();
-        await this.page.waitForTimeout(2000);
     }
     async edituserInfoPage(EditUserName){
         await this.userRoleSelectOptionsEditInfo.nth(0).click();
-        await this.page.waitForTimeout(3000);
         await this.userRoleFieldEditInfo.click();
-        await this.page.waitForTimeout(3000);
         await this.usernameEditInfo.nth(1).fill(EditUserName);
-        await this.page.waitForTimeout(3000);
         await this.usernameEditInfoSavebtn.click();
-        await this.page.waitForTimeout(2000);
         console.log(await this.successfullyEditInfoMsg.textContent());
-        await this.page.waitForTimeout(5000);
         await this.scolldownInfo.scrollIntoViewIfNeeded();
         await this.page.waitForTimeout(2000);
     }
     async deleteuserInfo(){
         await this.systemUser.nth(1).click();
         await this.systemUser.nth(1).fill('Ronaldo Valdez Gibbs');
-        await this.page.waitForTimeout(2000);
         await this.systemUserSearchbtn.click();
-        await this.page.waitForTimeout(1000);
         await this.recordCheckbox.nth(1).click();
-        await this.page.waitForTimeout(2000);
         await this.userDeleteInfo.nth(1).click();
-        await this.page.waitForTimeout(5000);
         await this.userDeletebtn.click();
         await this.page.waitForTimeout(5000);
         await this.userDeleteDialogbtn.click();
-        await this.page.waitForTimeout(2000);
         console.log(await this.successfullyDeletedUser.textContent());
-        await this.page.waitForTimeout(2000);
         console.log(await this.NorecordsFound.textContent());
         await this.page.waitForTimeout(2000);
 
