@@ -1,0 +1,192 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\playwright.config.js",
+    "rootDir": "C:/Users/Kc Cabelin/Desktop/open-hrm-playwright-Automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "xmlnReports/xmlReport.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Kc Cabelin/Desktop/open-hrm-playwright-Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Kc Cabelin/Desktop/open-hrm-playwright-Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.1",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "LogInPage.spec.js",
+      "file": "LogInPage.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Allow user login page",
+          "file": "LogInPage.spec.js",
+          "line": 19,
+          "column": 6,
+          "specs": [
+            {
+              "title": "navigate hr demo login",
+              "ok": true,
+              "tags": [
+                "e2eTesting"
+              ],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 14876,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "getByTitle('OrangeHRM')\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-21T08:23:44.118Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-page-navigate-hr-demo-login-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-page-navigate-hr-demo-login-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f39356a920f6b3e41f26-526d42c8f5e95b48a3c5",
+              "file": "LogInPage.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "should not be able to login when user enters invalid credentials",
+              "ok": true,
+              "tags": [
+                "e2eTesting"
+              ],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 16959,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "getByTitle('OrangeHRM')\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-21T08:23:44.118Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f39356a920f6b3e41f26-94866802bb364b06d9ca",
+              "file": "LogInPage.spec.js",
+              "line": 46,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-10-21T08:23:43.362Z",
+    "duration": 18204.836,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

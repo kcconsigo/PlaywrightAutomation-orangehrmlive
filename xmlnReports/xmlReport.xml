@@ -1,0 +1,24 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="18.204836">
+<testsuite name="LogInPage.spec.js" timestamp="2024-10-21T08:23:43.473Z" hostname="chromium" tests="2" failures="0" skipped="0" time="31.835" errors="0">
+<testcase name="Allow user login page › navigate hr demo login" classname="LogInPage.spec.js" time="14.876">
+<system-out>
+<![CDATA[getByTitle('OrangeHRM')
+
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-page-navigate-hr-demo-login-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-page-navigate-hr-demo-login-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Allow user login page › should not be able to login when user enters invalid credentials" classname="LogInPage.spec.js" time="16.959">
+<system-out>
+<![CDATA[getByTitle('OrangeHRM')
+
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
