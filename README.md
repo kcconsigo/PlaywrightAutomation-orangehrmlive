@@ -22,7 +22,7 @@ CICD - Jenkins, CircleCI
 Reporting - Test Runner via cucumber and Allure Report 
 -- Command script for Installing Scoop Allure report in Windows Powershell -- 
 ![image](https://github.com/user-attachments/assets/efb8b3fb-b668-4947-a9ae-dee9677474f6)
-**NOTE** : If you encounter an error in installing scoop allure <is not recognized as the name of a cmdlet>
+**NOTE** : If you encounter an error in installing scoop allure = 'is not recognized as the name of a cmdlet'
 
 --use this command below: -- 
 
