@@ -20,6 +20,12 @@ CI - GitHub actions via yaml
 CICD - Jenkins, CircleCI 
 
 Reporting - Test Runner via cucumber and Allure Report 
+-- Command script for Installing Scoop Allure report in Windows Powershell -- 
+![image](https://github.com/user-attachments/assets/efb8b3fb-b668-4947-a9ae-dee9677474f6)
+**NOTE** : If you encounter error in installing scoop allure<is not recognized as the name of a cmdlet>
+--use this command below: -- 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 Monitoring and Logs - Grafana Dashbaord
 
@@ -36,6 +42,7 @@ Also you can use if you want to run your application via web browser
 ![image](https://github.com/user-attachments/assets/8dcf015f-7762-4239-8554-e966cca297da)
 * ![image](https://github.com/user-attachments/assets/17462e49-73f7-44cd-8547-79082cfd9acb)
 * ![image](https://github.com/user-attachments/assets/4d4310c1-ed6c-43f8-909b-df2b5eab18e2)
+
 
 
 
