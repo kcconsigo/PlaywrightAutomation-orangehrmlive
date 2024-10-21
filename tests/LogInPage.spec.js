@@ -17,7 +17,7 @@ test.beforeEach('Orange live demo app', async ({page}) => {
 // })
 
 test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
-  test('navigate hr demo login', async ({ page })=>{
+  test('should be able to login when user enters valid credentials', async ({ page })=>{
 
 
         const loginpage = new LoginPage(page);
