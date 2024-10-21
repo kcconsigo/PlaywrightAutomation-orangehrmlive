@@ -8,13 +8,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.48.0",
+    "@playwright/test": "^1.48.1",
     "@types/node": "^22.7.5",
     "allure-commandline": "^2.30.0",
     "allure-playwright": "^3.0.5"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
-    "cucumber-html-reporter": "^7.2.0"
+    "cucumber-html-reporter": "^6.0.0"
   }
 }
