@@ -70,23 +70,28 @@ DEV and QA
 
 
 2. Install donenv package in powershell terminal
+
 ![image](https://github.com/user-attachments/assets/b345ec1f-8834-458f-84f5-d52097aa4995)
 once the installation succefully, the packe will be added to package.json
 ![image](https://github.com/user-attachments/assets/22926977-aa81-45b2-b8b0-00302623e6a7)
 
 3. Create Envi setup js file
+
 ![image](https://github.com/user-attachments/assets/483d4d0c-23ef-41d5-8628-aca6acb8ad37)
 ![image](https://github.com/user-attachments/assets/0a437818-ea14-4311-be05-6254c03f2c5b)
 
 
 4. Specify globalSetup to your playwright.config.js
+
 ![image](https://github.com/user-attachments/assets/57001e64-d760-4dc5-86d8-6461713a4f2c)
 
 5. We can now use our process.env in spec.js file
+
 ![image](https://github.com/user-attachments/assets/7cf6ef57-8267-4653-9290-6095fed31919)
 
 
 6. And then lastly execution
+
 ![image](https://github.com/user-attachments/assets/dc4cfea5-3469-48cd-b552-19f94a6c1788)
 
 NOTE: for MacOS we should use this command : 
@@ -94,6 +99,7 @@ export ENV="dev"
 export ENV="qa"
 
 7 Then run this command to your terminal (I am using headed mode)
+
 npx playwright test LogInPage.spec --headed
 
 
