@@ -11,10 +11,10 @@ constructor(page){
     this.adminmenu = page.locator(".oxd-main-menu-item");
     this.empAddButton = page.locator('.oxd-button');
     this.userRoleSelectOptions = page.locator('.oxd-select-text');
-    this.userRoleField = page.locator('//div[@role="listbox"]//span[contains(text(),"Admin")]');
+    this.userRoleField = page.getByRole('option', { name: 'Admin' });
     // this.userRoleSelectOptions = page.locator('');
     this.userStatus = page.locator('.oxd-select-text');
-    this.usreStatusField = page.locator('//div[@role="listbox"]//span[contains(text(),"Enabled")]')
+    this.userStatusField = page.getByRole('option', { name: 'Enabled' });
     this.userEmpName = page.locator('.oxd-autocomplete-text-input');
     this.userEmpNameSelect = page.locator('.oxd-autocomplete-dropdown');
     // get placeholder text - Type for hints... await page.getByPlaceholder('Type for hints...').fill('Nhung  Dang');
@@ -41,7 +41,7 @@ constructor(page){
     await this.userRoleField.click();
     await this.page.waitForTimeout(3000);
     await this.userStatus.nth(1).click();
-    await this.usreStatusField.click();
+    await this.userStatusField.click();
     await this.page.waitForTimeout(3000);
   }
 

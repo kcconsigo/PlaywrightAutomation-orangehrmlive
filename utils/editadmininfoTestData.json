@@ -1,0 +1,35 @@
+[
+    {
+        "username" : "Admin",
+        "password" : "admin123",
+        "EditEmpName" : "Robert James",
+        "EditUserName" : "Dranreb",
+        "EditPassword" : "D3vT3$t3rR0l305", 
+        "EditConfirmPassword" : "D3vT3$t3rR0l305"
+    
+    },
+    {
+        "username" : "Admin",
+        "password" : "admin123",
+        "EditEmpName" : "Robert James",
+        "EditUserName" : "Jessie",
+        "EditPassword" : "PerfT3st3rR0l369", 
+        "EditConfirmPassword" : "PerfT3st3rR0l369"
+    },
+    {
+        "username" : "Admin",
+        "password" : "admin123",
+        "EditEmpName" : "Ronaldo Gibbs",
+        "EditUserName" : "Yoo Nah",
+        "EditPassword" : "P@$$w0rd$hit@ss", 
+        "EditConfirmPassword" : "P@$$w0rd$hit@ss"
+    },
+    {
+        "username" : "Admin",
+        "password" : "admin123",
+        "EditEmpName" : "Ronaldo Gibbs",
+        "EditUserName" : "Gabbi Garcia",
+        "EditPassword" : "M@derfucker@$$", 
+        "EditConfirmPassword" : "M@derfucker@$$"
+    }
+    ]

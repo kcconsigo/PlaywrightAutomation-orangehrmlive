@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
 
-exports.AdminPageDashboard = class AdminPageDashboard{
+exports.EditAdminPage = class EditAdminPage{
     /**
 * @param {import('@playwright/test').Page} page
 */

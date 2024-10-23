@@ -1,0 +1,8 @@
+[{
+    "userrole1" : "Admin",
+    "status1" : "Enabled"
+},
+{
+    "userrole2" : "ESS",
+    "status2" : "Disabled"
+}]

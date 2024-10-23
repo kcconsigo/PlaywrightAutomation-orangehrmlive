@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/loginpage.page');
 const { AdminPage } = require('../pages/adminpage.page');
-const { AdminPageDashboard } = require('../pages/adminpagedashboard.page');
+const { AdminPageDashboard } = require('../pages/editadminpage.page');
 //JSON->string->js object
 const dataSetLiveDemo = JSON.parse(JSON.stringify(require("../utils/loginTestData.json")));
 const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidloginTestData.json")));

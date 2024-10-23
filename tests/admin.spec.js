@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { AdminPage } = require('../pages/adminpage.page');
 const { LoginPage } = require('../pages/loginpage.page');
 const dataSetCreateAdmin = JSON.parse(JSON.stringify(require("../utils/adminTestData.json")));
+const dataSetRoleAndStatus = JSON.parse(JSON.stringify(require("../utils/adminroleandstatusTestData.json")));
 
 for(const createdata of dataSetCreateAdmin)
 {
