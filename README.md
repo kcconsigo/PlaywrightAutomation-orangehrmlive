@@ -83,7 +83,8 @@ once the installation succefully, the packe will be added to package.json
 ![image](https://github.com/user-attachments/assets/57001e64-d760-4dc5-86d8-6461713a4f2c)
 
 5. We can now use our process.env in spec.js file
-![image](https://github.com/user-attachments/assets/35d2cfd1-bdf2-4fd9-93bd-a3518847ab38)
+![image](https://github.com/user-attachments/assets/7cf6ef57-8267-4653-9290-6095fed31919)
+
 
 6. And then lastly execution
 ![image](https://github.com/user-attachments/assets/dc4cfea5-3469-48cd-b552-19f94a6c1788)
