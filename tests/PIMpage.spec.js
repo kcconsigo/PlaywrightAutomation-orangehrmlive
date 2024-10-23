@@ -5,7 +5,7 @@ const { PIMPage } = require('../pages/pimpage.page');
 const dataSetPIM = JSON.parse(JSON.stringify(require("../utils/PIMTestData.json")));
 
 
-test.describe('Navigates to PIM page', async () => {
+test.describe('Navigates to PIM page', {tag:'@Regressiontesting'}, async () => {
     for(const dataPIM of dataSetPIM)
         {
             test(`should allow to Add Employee ${dataPIM.firstName},${dataPIM.lastName},${dataPIM.lastName},${dataPIM.empID}`, {tag: '@EndtoEndTesting'}, async ({ page })=> {

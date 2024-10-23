@@ -4,7 +4,7 @@ const { LoginPage } = require('../pages/loginpage.page');
 const dataSetCreateAdmin = JSON.parse(JSON.stringify(require("../utils/adminTestData.json")));
 const dataSetRoleAndStatus = JSON.parse(JSON.stringify(require("../utils/adminroleandstatusTestData.json")));
 
-test.describe('User Creates Admin ', '@SmokeTesting', async () => {
+test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
   for(const createdata of dataSetCreateAdmin)
        {
           test(`Create Admin ${createdata.EmpName},${createdata.UserName},${createdata.Password},${createdata.ConfirmPassword}`, async ({ page })=> {
