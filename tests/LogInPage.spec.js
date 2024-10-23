@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/loginpage.page');
 
 //JSON->string->js object
-const dataSetLiveDemo = JSON.parse(JSON.stringify(require("../utils/loginTestData.json")));
+const positveDataSet = JSON.parse(JSON.stringify(require("../utils/loginTestData.json")));
 const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidloginTestData.json")));
 
 
@@ -23,7 +23,7 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
         const loginpage = new LoginPage(page);
         await page.waitForTimeout(2000);
         await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
-        await loginpage.loginCreds(dataSetLiveDemo.username, dataSetLiveDemo.password)
+        await loginpage.loginCreds(positveDataSet.username, positveDataSet.password)
         await loginpage.clickLoginBtn()
         await page.waitForTimeout(5000);
        

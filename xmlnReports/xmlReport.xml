@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="20.579670999999998">
-<testsuite name="LogInPage.spec.js" timestamp="2024-10-23T11:42:51.723Z" hostname="chromium" tests="2" failures="0" skipped="0" time="36.954" errors="0">
-<testcase name="Allow user login page › should be able to login when user enters valid credentials" classname="LogInPage.spec.js" time="17.485">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="17.944229">
+<testsuite name="LogInPage.spec.js" timestamp="2024-10-23T12:29:43.658Z" hostname="chromium" tests="2" failures="0" skipped="0" time="32.218" errors="0">
+<testcase name="Allow user login page › should be able to login when user enters valid credentials" classname="LogInPage.spec.js" time="15.321">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
 
@@ -10,7 +10,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Allow user login page › should not be able to login when user enters invalid credentials" classname="LogInPage.spec.js" time="19.469">
+<testcase name="Allow user login page › should not be able to login when user enters invalid credentials" classname="LogInPage.spec.js" time="16.897">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
 
