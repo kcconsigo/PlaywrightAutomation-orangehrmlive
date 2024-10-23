@@ -22,7 +22,7 @@ constructor(page){
     this.password = page.locator('.oxd-input.oxd-input');
     this.comfirmPassword = page.locator('.oxd-input.oxd-input');
     this.submitBtbnSave = page.locator('//button[normalize-space()="Save"]');
-    this.successfullyMsg = page.locator('.oxd-toast.oxd-toast--success');
+    this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
     this.adminList = page.locator('.oxd-table-body');
 
   }
@@ -56,8 +56,7 @@ constructor(page){
   }
   async clickSavebtn(){
     await this.submitBtbnSave.nth(0).click();
-    console.log(await this.successfullyMsg.textContent());
-    await expect(this.successfullyMsg).toBeVisible();
+    console.log(await expect(this.successfullyMsg).toBeVisible());
     //await this.page.waitForTimeout(5000);
   }
   // async verifyAdmin(UserName){

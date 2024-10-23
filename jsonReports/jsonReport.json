@@ -65,23 +65,23 @@
   },
   "suites": [
     {
-      "title": "orangelivedemo.spec.js",
-      "file": "orangelivedemo.spec.js",
+      "title": "LogInPage.spec.js",
+      "file": "LogInPage.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "Allow user login page",
-          "file": "orangelivedemo.spec.js",
-          "line": 20,
+          "file": "LogInPage.spec.js",
+          "line": 19,
           "column": 6,
           "specs": [
             {
-              "title": "navigate hr demo login",
+              "title": "should be able to login when user enters valid credentials",
               "ok": true,
               "tags": [
-                "E2ETesting"
+                "SmokeTesting"
               ],
               "tests": [
                 {
@@ -94,7 +94,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 15108,
+                      "duration": 15000,
                       "errors": [],
                       "stdout": [
                         {
@@ -103,17 +103,17 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-23T14:46:13.899Z",
+                      "startTime": "2024-10-23T16:08:25.820Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\orangelivedemo-Allow-user-login-page-navigate-hr-demo-login-chromium\\test-finished-1.png"
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-35c5d-er-enters-valid-credentials-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\orangelivedemo-Allow-user-login-page-navigate-hr-demo-login-chromium\\video.webm"
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-35c5d-er-enters-valid-credentials-chromium\\video.webm"
                         }
                       ]
                     }
@@ -121,16 +121,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "ea7423b4a90ef6eff9a1-56548ca0821de2ab55aa",
-              "file": "orangelivedemo.spec.js",
-              "line": 21,
-              "column": 3
+              "id": "f39356a920f6b3e41f26-fef725f40f9486c985e1",
+              "file": "LogInPage.spec.js",
+              "line": 20,
+              "column": 5
             },
             {
               "title": "should not be able to login when user enters invalid credentials",
               "ok": true,
               "tags": [
-                "E2ETesting"
+                "SmokeTesting"
               ],
               "tests": [
                 {
@@ -143,26 +143,29 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 16760,
+                      "duration": 14569,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "getByTitle('OrangeHRM')\n"
+                        },
+                        {
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-23T14:46:13.890Z",
+                      "startTime": "2024-10-23T16:08:25.827Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\orangelivedemo-Allow-user--bc7ad--enters-invalid-credentials-chromium\\test-finished-1.png"
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\orangelivedemo-Allow-user--bc7ad--enters-invalid-credentials-chromium\\video.webm"
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\\video.webm"
                         }
                       ]
                     }
@@ -170,9 +173,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "ea7423b4a90ef6eff9a1-bb0408614fb019c736da",
-              "file": "orangelivedemo.spec.js",
-              "line": 47,
+              "id": "f39356a920f6b3e41f26-94866802bb364b06d9ca",
+              "file": "LogInPage.spec.js",
+              "line": 31,
               "column": 5
             }
           ]
@@ -182,8 +185,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-23T14:46:13.256Z",
-    "duration": 17889.861,
+    "startTime": "2024-10-23T16:08:25.127Z",
+    "duration": 16146.058,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,

@@ -13,7 +13,8 @@ exports.LoginPage = class LoginPage{
         this.password_textbox = page.locator('input[placeholder=Password]');
         this.login_btn = page.locator('button[type=submit]');
 
-        this.err_msg = page.locator('.oxd-alert.oxd-alert--error');
+        // this.err_msg = page.locator('.oxd-alert.oxd-alert--error');
+        this.err_msg = page.getByText('Invalid credentials');
     }
 
 
@@ -36,8 +37,8 @@ exports.LoginPage = class LoginPage{
     }
     async validateInvalidMessage()
     {
-        await this.err_msg.textContent();
-        await this.page.waitForTimeout(2000);
+        console.log(await expect(this.err_msg).toBeVisible());
+        // await this.page.waitForTimeout(2000);
     }
 
     // enterUsername(){

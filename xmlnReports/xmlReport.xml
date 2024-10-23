@@ -1,22 +1,23 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="17.889861">
-<testsuite name="orangelivedemo.spec.js" timestamp="2024-10-23T14:46:13.299Z" hostname="chromium" tests="2" failures="0" skipped="0" time="31.868" errors="0">
-<testcase name="Allow user login page › navigate hr demo login" classname="orangelivedemo.spec.js" time="15.108">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="16.146058">
+<testsuite name="LogInPage.spec.js" timestamp="2024-10-23T16:08:25.228Z" hostname="chromium" tests="2" failures="0" skipped="0" time="29.569" errors="0">
+<testcase name="Allow user login page › should be able to login when user enters valid credentials" classname="LogInPage.spec.js" time="15">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
 
-[[ATTACHMENT|..\test-results\orangelivedemo-Allow-user-login-page-navigate-hr-demo-login-chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-35c5d-er-enters-valid-credentials-chromium\test-finished-1.png]]
 
-[[ATTACHMENT|..\test-results\orangelivedemo-Allow-user-login-page-navigate-hr-demo-login-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-35c5d-er-enters-valid-credentials-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Allow user login page › should not be able to login when user enters invalid credentials" classname="orangelivedemo.spec.js" time="16.76">
+<testcase name="Allow user login page › should not be able to login when user enters invalid credentials" classname="LogInPage.spec.js" time="14.569">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
+[90mundefined[39m
 
-[[ATTACHMENT|..\test-results\orangelivedemo-Allow-user--bc7ad--enters-invalid-credentials-chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\test-finished-1.png]]
 
-[[ATTACHMENT|..\test-results\orangelivedemo-Allow-user--bc7ad--enters-invalid-credentials-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\LogInPage-Allow-user-login-5d9dc--enters-invalid-credentials-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>

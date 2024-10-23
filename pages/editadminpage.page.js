@@ -16,15 +16,15 @@ exports.EditAdminPage = class EditAdminPage{
         this.userRoleFieldEditInfo = page.locator('//div[@role="listbox"]//span[contains(text(),"ESS")]');
         this.usernameEditInfo = page.locator('.oxd-input.oxd-input');
         this.usernameEditInfoSavebtn = page.locator('//button[normalize-space()="Save"]');
-        this.successfullyEditInfoMsg = page.locator('.oxd-toast.oxd-toast--success');
+        this.successfullyEditInfoMsg = page.getByText('SuccessSuccessfully Updated×');
         this.scolldownInfo = page.locator('.orangehrm-container');
         this.userDeleteInfo = page.locator('.oxd-checkbox-wrapper');
         this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
         this.userDeletebtn = page.locator('//div[@class="orangehrm-container"]//button[1]');
         this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
         this.userDeleteDialogbtn = page.locator('//button[normalize-space()="Yes, Delete"]');
-        this.successfullyDeletedUser = page.locator('.oxd-toast.oxd-toast--success');
-        this.NorecordsFound = page.locator('.oxd-toast.oxd-toast--info');
+        this.successfullyDeletedUser = page.getByText('SuccessSuccessfully Deleted×');
+        this.NorecordsFound = page.getByText('InfoNo Records Found×');
         
     }
 
@@ -61,9 +61,8 @@ exports.EditAdminPage = class EditAdminPage{
         await this.userDeletebtn.click();
         await this.page.waitForTimeout(5000);
         await this.userDeleteDialogbtn.click();
-        console.log(await this.successfullyDeletedUser.textContent());
-        console.log(await this.NorecordsFound.textContent());
-        await this.page.waitForTimeout(2000);
+        console.log(await expect(this.successfullyDeletedUser).toBeVisible());
+        console.log(await expect(this.NorecordsFound).toBeVisible());
 
     }
 
