@@ -1,138 +1,69 @@
-<testsuites id="" name="" tests="4" failures="4" skipped="0" errors="0" time="67.54949099999999">
-<testsuite name="admin.spec.js" timestamp="2024-10-23T08:54:16.860Z" hostname="chromium" tests="4" failures="4" skipped="0" time="254.554" errors="0">
-<testcase name="Create Admin Robert James,Dranreb,D3vT3$t3rR0l305,D3vT3$t3rR0l305" classname="admin.spec.js" time="60.862">
-<failure message="admin.spec.js:8:9 Create Admin Robert James,Dranreb,D3vT3$t3rR0l305,D3vT3$t3rR0l305" type="FAILURE">
-<![CDATA[  [chromium] › admin.spec.js:8:9 › Create Admin Robert James,Dranreb,D3vT3$t3rR0l305,D3vT3$t3rR0l305 
-
-    Error: locator.click: Target page, context or browser has been closed
-    Call log:
-      - waiting for locator('.oxd-autocomplete-dropdown').getByRole('option', { name: 'Robert James' }).first()
-
-
-       at ..\pages\adminpage.page.js:51
-
-      49 |     // await this.userStatus.nth(1).selectOption('Enabled');
-      50 |     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    > 51 |     await this.userEmpNameSelect.getByRole('option', { name: EmpName }).nth(0).click();
-         |                                                                                ^
-      52 |     await this.username.nth(1).fill(UserName);
-      53 |     await this.password.nth(2).fill(Password);
-      54 |     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
-
-        at AdminPage.createNewEmployeeInputTextFields (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\adminpage.page.js:51:80)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\admin.spec.js:20:17
-
-    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\admin-Create-Admin-Robert--af841-3-t3rR0l305-D3vT3-t3rR0l305-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testsuites id="" name="" tests="4" failures="1" skipped="0" errors="0" time="55.67120800000001">
+<testsuite name="PIMpage.spec.js" timestamp="2024-10-23T09:55:51.090Z" hostname="chromium" tests="4" failures="1" skipped="0" time="199.619" errors="0">
+<testcase name="Navigates to PIM page › should allow to Add Employee Robert James,Schneider,Schneider,1209" classname="PIMpage.spec.js" time="48.643">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
+SuccessSuccessfully Saved×
 
-[[ATTACHMENT|..\test-results\admin-Create-Admin-Robert--af841-3-t3rR0l305-D3vT3-t3rR0l305-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-d582c-es-Schneider-Schneider-1209-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-d582c-es-Schneider-Schneider-1209-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Create Admin Robert James,Jessie,PerfT3st3rR0l369,PerfT3st3rR0l369" classname="admin.spec.js" time="64.394">
-<failure message="admin.spec.js:8:9 Create Admin Robert James,Jessie,PerfT3st3rR0l369,PerfT3st3rR0l369" type="FAILURE">
-<![CDATA[  [chromium] › admin.spec.js:8:9 › Create Admin Robert James,Jessie,PerfT3st3rR0l369,PerfT3st3rR0l369 
-
-    Error: locator.click: Target page, context or browser has been closed
-    Call log:
-      - waiting for locator('.oxd-autocomplete-dropdown').getByRole('option', { name: 'Robert James' }).first()
-
-
-       at ..\pages\adminpage.page.js:51
-
-      49 |     // await this.userStatus.nth(1).selectOption('Enabled');
-      50 |     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    > 51 |     await this.userEmpNameSelect.getByRole('option', { name: EmpName }).nth(0).click();
-         |                                                                                ^
-      52 |     await this.username.nth(1).fill(UserName);
-      53 |     await this.password.nth(2).fill(Password);
-      54 |     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
-
-        at AdminPage.createNewEmployeeInputTextFields (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\adminpage.page.js:51:80)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\admin.spec.js:20:17
-
-    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\admin-Create-Admin-Robert--3e915-st3rR0l369-PerfT3st3rR0l369-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testcase name="Navigates to PIM page › should allow to Add Employee Ronaldo,Gibbs,Gibbs,2309" classname="PIMpage.spec.js" time="48.63">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
+SuccessSuccessfully Saved×
 
-[[ATTACHMENT|..\test-results\admin-Create-Admin-Robert--3e915-st3rR0l369-PerfT3st3rR0l369-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6c2f8-ee-Ronaldo-Gibbs-Gibbs-2309-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6c2f8-ee-Ronaldo-Gibbs-Gibbs-2309-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Create Admin Ronaldo Gibbs,Yoo Nah,P@$$w0rd$hit@ss,P@$$w0rd$hit@ss" classname="admin.spec.js" time="63.114">
-<failure message="admin.spec.js:8:9 Create Admin Ronaldo Gibbs,Yoo Nah,P@$$w0rd$hit@ss,P@$$w0rd$hit@ss" type="FAILURE">
-<![CDATA[  [chromium] › admin.spec.js:8:9 › Create Admin Ronaldo Gibbs,Yoo Nah,P@$$w0rd$hit@ss,P@$$w0rd$hit@ss 
-
-    Error: locator.click: Target page, context or browser has been closed
-    Call log:
-      - waiting for locator('.oxd-autocomplete-dropdown').getByRole('option', { name: 'Ronaldo Gibbs' }).first()
-
-
-       at ..\pages\adminpage.page.js:51
-
-      49 |     // await this.userStatus.nth(1).selectOption('Enabled');
-      50 |     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    > 51 |     await this.userEmpNameSelect.getByRole('option', { name: EmpName }).nth(0).click();
-         |                                                                                ^
-      52 |     await this.username.nth(1).fill(UserName);
-      53 |     await this.password.nth(2).fill(Password);
-      54 |     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
-
-        at AdminPage.createNewEmployeeInputTextFields (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\adminpage.page.js:51:80)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\admin.spec.js:20:17
-
-    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\admin-Create-Admin-Ronaldo-5e1e8-P-w0rd-hit-ss-P-w0rd-hit-ss-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testcase name="Navigates to PIM page › should allow to Add Employee Jose,Realonda,Realonda,1083" classname="PIMpage.spec.js" time="47.978">
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
+SuccessSuccessfully Saved×
 
-[[ATTACHMENT|..\test-results\admin-Create-Admin-Ronaldo-5e1e8-P-w0rd-hit-ss-P-w0rd-hit-ss-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Create Admin Ronaldo Gibbs,Gabbi Garcia,M@derfucker@$$,M@derfucker@$$" classname="admin.spec.js" time="66.184">
-<failure message="admin.spec.js:8:9 Create Admin Ronaldo Gibbs,Gabbi Garcia,M@derfucker@$$,M@derfucker@$$" type="FAILURE">
-<![CDATA[  [chromium] › admin.spec.js:8:9 › Create Admin Ronaldo Gibbs,Gabbi Garcia,M@derfucker@$$,M@derfucker@$$ 
+<testcase name="Navigates to PIM page › should allow to Add Employee Andy,lau,lau,1083" classname="PIMpage.spec.js" time="54.368">
+<failure message="PIMpage.spec.js:11:13 should allow to Add Employee Andy,lau,lau,1083" type="FAILURE">
+<![CDATA[  [chromium] › PIMpage.spec.js:11:13 › Navigates to PIM page › should allow to Add Employee Andy,lau,lau,1083 
 
-    Error: locator.click: Target page, context or browser has been closed
+    Error: locator.textContent: Target page, context or browser has been closed
     Call log:
-      - waiting for locator('.oxd-autocomplete-dropdown').getByRole('option', { name: 'Ronaldo Gibbs' }).first()
+      - waiting for locator('.oxd-toast.oxd-toast--success')
 
 
-       at ..\pages\adminpage.page.js:51
+       at ..\pages\pimpage.page.js:43
 
-      49 |     // await this.userStatus.nth(1).selectOption('Enabled');
-      50 |     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    > 51 |     await this.userEmpNameSelect.getByRole('option', { name: EmpName }).nth(0).click();
-         |                                                                                ^
-      52 |     await this.username.nth(1).fill(UserName);
-      53 |     await this.password.nth(2).fill(Password);
-      54 |     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
+      41 |         await this.page.waitForTimeout(2000);
+      42 |         await this.addEmpbuttonSave.click({timeout: 1000});
+    > 43 |         console.log(await this.successfullyMsg.textContent());
+         |                                                ^
+      44 |         await this.page.waitForTimeout(5000);
+      45 |     }
+      46 |     async editemployeeListlandingTab(firstName){
 
-        at AdminPage.createNewEmployeeInputTextFields (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\adminpage.page.js:51:80)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\admin.spec.js:20:17
+        at PIMPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:43:48)
+        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:24:13
 
     attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\admin-Create-Admin-Ronaldo-4e2d3-ia-M-derfucker-M-derfucker--chromium\video.webm
+    test-results\PIMpage-Navigates-to-PIM-p-311b3--Employee-Andy-lau-lau-1083-chromium\video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
 
-[[ATTACHMENT|..\test-results\admin-Create-Admin-Ronaldo-4e2d3-ia-M-derfucker-M-derfucker--chromium\video.webm]]
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-311b3--Employee-Andy-lau-lau-1083-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
