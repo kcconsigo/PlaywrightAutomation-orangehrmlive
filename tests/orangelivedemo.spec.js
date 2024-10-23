@@ -17,7 +17,7 @@ test.beforeEach('Orange live demo app', async ({page}) => {
 //     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 // })
 
-test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
+test.describe('Allow user login page', {tag: '@E2ETesting'}, () => {
   test('navigate hr demo login', async ({ page })=>{
 
 
