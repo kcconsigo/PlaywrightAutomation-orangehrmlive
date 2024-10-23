@@ -22,7 +22,7 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
 
         const loginpage = new LoginPage(page);
         await page.waitForTimeout(2000);
-        await loginpage.gotoLoginPage()
+        await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
         await loginpage.loginCreds(dataSetLiveDemo.username, dataSetLiveDemo.password)
         await loginpage.clickLoginBtn()
         await page.waitForTimeout(5000);
@@ -32,7 +32,7 @@ test.describe('Allow user login page', {tag: '@e2eTesting'}, () => {
 
       const invalidloginpage = new LoginPage(page);
       await page.waitForTimeout(2000);
-      await invalidloginpage.gotoLoginPage()
+      await invalidloginpage.gotoLoginPage(process.env.WEB_URL_QA);
       await invalidloginpage.loginCreds(negativeDataSet.usernameInvalid, negativeDataSet.passwordInvalid)
       await invalidloginpage.clickLoginBtn()
       await invalidloginpage.validateInvalidMessage()

@@ -57,7 +57,8 @@ constructor(page){
   async clickSavebtn(){
     await this.submitBtbnSave.nth(0).click();
     console.log(await this.successfullyMsg.textContent());
-    await this.page.waitForTimeout(5000);
+    await expect(this.successfullyMsg).toBeVisible();
+    //await this.page.waitForTimeout(5000);
   }
   // async verifyAdmin(UserName){
   //   // await page.getByTestId('scrolling-container').hover();

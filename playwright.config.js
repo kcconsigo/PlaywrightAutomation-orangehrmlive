@@ -23,6 +23,8 @@ const { chromium } = require('playwright');  // Or 'firefox' or 'webkit'.
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
+
+  globalSetup: 'utils/globalEnviSetup.js',
   testDir: './tests',
   timeout: 30 * 5000,
   /* Run tests in files in parallel */

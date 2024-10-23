@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
-    "cucumber-html-reporter": "^6.0.0"
+    "cucumber-html-reporter": "^6.0.0",
+    "dotenv": "^16.4.5"
   }
 }
