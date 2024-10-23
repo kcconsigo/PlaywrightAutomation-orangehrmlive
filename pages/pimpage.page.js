@@ -14,7 +14,7 @@ exports.PIMPage = class PIMPage{
         this.addEmpLastName = page.locator('.orangehrm-lastname');
         this.addEmpID = page.locator('.oxd-input');
         this.addEmpbuttonSave = page.locator('//button[normalize-space()="Save"]');
-        this.successfullyMsg = page.locator('.oxd-toast.oxd-toast--success');
+        this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
         this.listEmpNavTab = page.locator('.oxd-topbar-body-nav-tab');
         this.listEmployeeName = page.locator('.oxd-autocomplete-text-input');
         this.listEmpSearchbtn = page.locator('//button[normalize-space()="Search"]');
@@ -31,17 +31,18 @@ exports.PIMPage = class PIMPage{
         await this.page.waitForTimeout(2000);
     }
     async addEmployeeDetails(firstName, middleName, lastName, empID ){
-        await this.addEmpFirstName.fill(firstName);
-        await this.page.waitForTimeout(1000);
-        await this.addEmpMidName.fill(middleName);
-        await this.page.waitForTimeout(1000);
-        await this.addEmpLastName.fill(lastName);
-        await this.page.waitForTimeout(1000);
-        await this.addEmpID.nth(4).fill(empID);
-        await this.page.waitForTimeout(2000);
-        await this.addEmpbuttonSave.click({timeout: 1000});
-        console.log(await this.successfullyMsg.textContent());
-        await this.page.waitForTimeout(5000);
+        await expect(async () => {
+            await this.addEmpFirstName.fill(firstName);
+            await this.page.waitForTimeout(1000);
+            await this.addEmpMidName.fill(middleName);
+            await this.page.waitForTimeout(1000);
+            await this.addEmpLastName.fill(lastName);
+            await this.page.waitForTimeout(1000);
+            await this.addEmpID.nth(4).fill(empID);
+            await this.page.waitForTimeout(2000);
+            await this.addEmpbuttonSave.click({timeout: 1000});
+            console.log(await expect(this.successfullyMsg).toBeVisible({timeout: 500}));
+        }).toPass();
     }
     async editemployeeListlandingTab(firstName){
         await this.pimmenu.nth(1).click();

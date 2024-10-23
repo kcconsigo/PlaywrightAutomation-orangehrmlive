@@ -52,11 +52,13 @@ constructor(page){
     await this.username.nth(1).fill(UserName);
     await this.password.nth(2).fill(Password);
     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
-    await this.page.waitForTimeout(3000);
   }
   async clickSavebtn(){
-    await this.submitBtbnSave.nth(0).click();
-    console.log(await expect(this.successfullyMsg).toBeVisible());
+    await expect(async () => {
+      await this.submitBtbnSave.nth(0).click();
+      console.log(await expect(this.successfullyMsg).toBeVisible({timeout: 500}));
+    }).toPass();
+
     //await this.page.waitForTimeout(5000);
   }
   // async verifyAdmin(UserName){

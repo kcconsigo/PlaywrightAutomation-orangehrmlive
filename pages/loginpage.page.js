@@ -33,12 +33,15 @@ exports.LoginPage = class LoginPage{
         
     }
     async clickLoginBtn(){
-        await this.login_btn.click();
+            await this.login_btn.click();
+        
     }
     async validateInvalidMessage()
     {
-        console.log(await expect(this.err_msg).toBeVisible());
-        // await this.page.waitForTimeout(2000);
+            await expect(async () =>{
+                console.log(await expect(this.err_msg).toBeVisible({timeout:300}));
+            }).toPass();
+
     }
 
     // enterUsername(){
