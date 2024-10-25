@@ -13,62 +13,70 @@ exports.PIMPage = class PIMPage{
         this.addEmpMidName = page.locator('.orangehrm-middlename');
         this.addEmpLastName = page.locator('.orangehrm-lastname');
         this.addEmpID = page.locator('.oxd-input');
-        this.addEmpbuttonSave = page.locator('//button[normalize-space()="Save"]');
+        this.addEmpbuttonSave = page.locator('//button[@type="submit"]');
+        this.addEmpNationalityField = page.locator('.oxd-select-text.oxd-select-text--active');
+        this.addEmpNationalityselect = page.getByRole('option', { name: 'Australian' });
+        this.addEmpMaritalStatusField = page.locator('.oxd-select-text.oxd-select-text--active');
+        this.addEmpMaritalStatusSelect = page.getByRole('option', { name: 'Married' });
+        this.addEmpInfoSave = page.locator('//button[@type="submit"]');
         this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
         this.listEmpNavTab = page.locator('.oxd-topbar-body-nav-tab');
         this.listEmployeeName = page.locator('.oxd-autocomplete-text-input');
-        this.listEmpSearchbtn = page.locator('//button[normalize-space()="Search"]');
-        this.editEmplistbtn = page.locator('(//button[@type="button"])[6]');
+        this.listEmpSearchbtn = page.locator('//button[@type="submit"]');
+        this.editEmplistbtn = page.locator('.oxd-icon-button');
         this.emplistdisplayTable = page.locator('.oxd-table.orangehrm-employee-list');
+        this.buttonEmpInfo = page.locator(".oxd-button");
     }
 
     async PIMTab(){
         await this.pimmenu.nth(1).click();
-        await this.page.waitForTimeout(2000);
+        
     }
     async addEmpTab(){
         await this.addempTab.nth(2).click();
         await this.page.waitForTimeout(2000);
     }
     async addEmployeeDetails(firstName, middleName, lastName, empID ){
+        await this.addEmpFirstName.fill(firstName);
+        await this.addEmpMidName.fill(middleName);
+        await this.addEmpLastName.fill(lastName);
+        await this.addEmpID.nth(4).fill(empID);
         await expect(async () => {
-            await this.addEmpFirstName.fill(firstName);
-            await this.page.waitForTimeout(1000);
-            await this.addEmpMidName.fill(middleName);
-            await this.page.waitForTimeout(1000);
-            await this.addEmpLastName.fill(lastName);
-            await this.page.waitForTimeout(1000);
-            await this.addEmpID.nth(4).fill(empID);
-            await this.page.waitForTimeout(2000);
             await this.addEmpbuttonSave.click({timeout: 1000});
-            console.log(await expect(this.successfullyMsg).toBeVisible({timeout: 500}));
+            
         }).toPass();
+        console.log(await expect(this.successfullyMsg).toBeVisible());
+        await this.addEmpNationalityField.nth(0).click();
+        await this.addEmpNationalityselect.click();
+        await this.addEmpMaritalStatusField.nth(1).click();
+        await this.addEmpMaritalStatusSelect.click();
+        await this.addEmpInfoSave.nth(1).click();
+        await this.page.waitForTimeout(2000);
+
     }
-    async editemployeeListlandingTab(firstName){
+    async employeeListlandingTab(firstName){
+        const listofEmpnames = page.locator('.oxd-autocomplete-text-input');
+
+        // for(const Empnames of listofEmpnames.getByRole('option', { name: firstName }).all()) {
+        //     await this.page.getByRole('option', { name: firstName }).nth(1).click();
+        // }
         await this.pimmenu.nth(1).click();
         await this.page.waitForTimeout(2000);
         await this.listEmpNavTab.nth(1).click();
-        await this.page.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
-        await this.page.getByRole('option', { name: firstName }).click();
+        await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
+        for(let i = 0; i < listofEmpnames; i++){
+            const listofEmpnames = this.page.getByRole('option', { name: firstName }).nth(i).textContent();
+            if(await this.listofEmpnames.toBeVisible()){
+                await this.page.getByRole('option', { name: firstName }).nth(i).click();
+            }
+        }
         await this.page.waitForTimeout(2000);
         await this.listEmpSearchbtn.click();
         await this.page.waitForTimeout(2000);
+        await expect(async () =>{
+            await this.editEmplistbtn.nth(3).click({timeout: 1000});
+        }).toPass();
 
     }
-    async employeeListdisplayTable(){
-    //     const rowList = this.emplistdisplayTable;
-    //    for(const emplist of rowList){
-    //     console.log(await this.emplist.allTextContents());
-    //    }
-    await this.emplistdisplayTable.textContent()
-       await this.page.waitForTimeout(2000);
-
-    }
-    async editemployeeList(){
-        await this.editEmplistbtn.click({timeout: 1000});
-        await this.page.waitForTimeout(3000);
-    }
-
-
 
 }
