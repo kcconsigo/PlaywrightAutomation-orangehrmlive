@@ -94,36 +94,36 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "timedOut",
-                      "duration": 150371,
+                      "status": "failed",
+                      "duration": 23508,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m"
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\n    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                          "column": 56,
+                          "line": 48
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m"
-                        },
-                        {
                           "location": {
                             "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
-                            "column": 73,
-                            "line": 62
+                            "column": 56,
+                            "line": 48
                           },
-                          "message": "Error: locator.click: Test timeout of 150000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('option', { name: 'Robert James' }).nth(1)\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmpNavTab\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmployeeName\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Type for hints...'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mfill(firstName)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m firstName })\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmpSearchbtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.employeeListlandingTab (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:62:73)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:25:13\u001b[22m"
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13\u001b[22m"
                         }
                       ],
                       "stdout": [
                         {
                           "text": "getByTitle('OrangeHRM')\n"
-                        },
-                        {
-                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-25T14:47:35.142Z",
+                      "startTime": "2024-10-25T15:25:13.781Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -135,7 +135,12 @@
                           "contentType": "video/webm",
                           "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-d582c-es-Schneider-Schneider-1209-chromium\\video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                        "column": 56,
+                        "line": 48
+                      }
                     }
                   ],
                   "status": "unexpected"
@@ -163,36 +168,36 @@
                   "results": [
                     {
                       "workerIndex": 1,
-                      "status": "timedOut",
-                      "duration": 150318,
+                      "status": "failed",
+                      "duration": 24102,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m"
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\n    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                          "column": 56,
+                          "line": 48
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 150000ms exceeded.\u001b[39m"
-                        },
-                        {
                           "location": {
                             "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
-                            "column": 73,
-                            "line": 62
+                            "column": 56,
+                            "line": 48
                           },
-                          "message": "Error: locator.click: Test timeout of 150000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('option', { name: 'Ronaldo' }).nth(1)\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmpNavTab\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmployeeName\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Type for hints...'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mfill(firstName)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m firstName })\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlistEmpSearchbtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.employeeListlandingTab (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:62:73)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:25:13\u001b[22m"
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13\u001b[22m"
                         }
                       ],
                       "stdout": [
                         {
                           "text": "getByTitle('OrangeHRM')\n"
-                        },
-                        {
-                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-25T14:47:35.160Z",
+                      "startTime": "2024-10-25T15:25:13.784Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -204,7 +209,12 @@
                           "contentType": "video/webm",
                           "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-6c2f8-ee-Ronaldo-Gibbs-Gibbs-2309-chromium\\video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                        "column": 56,
+                        "line": 48
+                      }
                     }
                   ],
                   "status": "unexpected"
@@ -217,7 +227,7 @@
             },
             {
               "title": "should allow to Add Employee Jose,Realonda,Realonda,1083",
-              "ok": true,
+              "ok": false,
               "tags": [
                 "Regressiontesting",
                 "EndtoEndTesting"
@@ -232,35 +242,56 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 56233,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 23681,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\n    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                          "column": 56,
+                          "line": 48
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                            "column": 56,
+                            "line": 48
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
                           "text": "getByTitle('OrangeHRM')\n"
-                        },
-                        {
-                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-25T14:47:35.174Z",
+                      "startTime": "2024-10-25T15:25:13.778Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\\test-finished-1.png"
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\\test-failed-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
                           "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\\video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                        "column": 56,
+                        "line": 48
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "d6ec847ddd9b15b639f6-4e49553f4cb07347fefd",
@@ -270,7 +301,7 @@
             },
             {
               "title": "should allow to Add Employee Andy,lau,lau,1283",
-              "ok": true,
+              "ok": false,
               "tags": [
                 "Regressiontesting",
                 "EndtoEndTesting"
@@ -285,35 +316,51 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 55049,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 22560,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\n    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                          "column": 56,
+                          "line": 48
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                            "column": 56,
+                            "line": 48
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('SuccessSuccessfully Saved×')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('SuccessSuccessfully Saved×')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\pimpage.page.js:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m             \n \u001b[90m 47 |\u001b[39m         })\u001b[33m.\u001b[39mtoPass()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessfullyMsg)\u001b[33m.\u001b[39mtoBeVisible())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityField\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpNationalityselect\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddEmpMaritalStatusField\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at PIMPage.addEmployeeDetails (C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js:48:56)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\tests\\PIMpage.spec.js:24:13\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
                           "text": "getByTitle('OrangeHRM')\n"
-                        },
-                        {
-                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-25T14:47:35.151Z",
+                      "startTime": "2024-10-25T15:25:13.798Z",
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-de0dd--Employee-Andy-lau-lau-1283-chromium\\test-finished-1.png"
-                        },
                         {
                           "name": "video",
                           "contentType": "video/webm",
                           "path": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\test-results\\PIMpage-Navigates-to-PIM-p-de0dd--Employee-Andy-lau-lau-1283-chromium\\video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\open-hrm-playwright-Automation\\pages\\pimpage.page.js",
+                        "column": 56,
+                        "line": 48
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "d6ec847ddd9b15b639f6-203a04c74a4e3bdcc415",
@@ -328,11 +375,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-25T14:47:34.283Z",
-    "duration": 153405.994,
-    "expected": 2,
+    "startTime": "2024-10-25T15:25:13.106Z",
+    "duration": 25944.905,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 4,
     "flaky": 0
   }
 }

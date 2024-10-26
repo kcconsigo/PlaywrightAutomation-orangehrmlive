@@ -1,28 +1,31 @@
-<testsuites id="" name="" tests="4" failures="2" skipped="0" errors="0" time="153.405994">
-<testsuite name="PIMpage.spec.js" timestamp="2024-10-25T14:47:34.431Z" hostname="chromium" tests="4" failures="2" skipped="0" time="411.971" errors="0">
-<testcase name="Navigates to PIM page › should allow to Add Employee Robert James,Schneider,Schneider,1209" classname="PIMpage.spec.js" time="150.371">
+<testsuites id="" name="" tests="4" failures="4" skipped="0" errors="0" time="25.944905">
+<testsuite name="PIMpage.spec.js" timestamp="2024-10-25T15:25:13.144Z" hostname="chromium" tests="4" failures="4" skipped="0" time="93.851" errors="0">
+<testcase name="Navigates to PIM page › should allow to Add Employee Robert James,Schneider,Schneider,1209" classname="PIMpage.spec.js" time="23.508">
 <failure message="PIMpage.spec.js:11:13 should allow to Add Employee Robert James,Schneider,Schneider,1209" type="FAILURE">
 <![CDATA[  [chromium] › PIMpage.spec.js:11:13 › Navigates to PIM page › should allow to Add Employee Robert James,Schneider,Schneider,1209 
 
-    Test timeout of 150000ms exceeded.
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
 
-    Error: locator.click: Test timeout of 150000ms exceeded.
+    Locator: getByText('SuccessSuccessfully Saved×')
+    Expected: visible
+    Received: <element(s) not found>
     Call log:
-      - waiting for getByRole('option', { name: 'Robert James' }).nth(1)
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByText('SuccessSuccessfully Saved×')
 
 
-       at ..\pages\pimpage.page.js:62
+       at ..\pages\pimpage.page.js:48
 
-      60 |         await this.listEmpNavTab.nth(1).click();
-      61 |         await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
-    > 62 |         await this.page.getByRole('option', { name: firstName }).nth(1).click();
-         |                                                                         ^
-      63 |         await this.page.waitForTimeout(2000);
-      64 |         await this.listEmpSearchbtn.click();
-      65 |         await this.page.waitForTimeout(2000);
+      46 |             
+      47 |         }).toPass();
+    > 48 |         console.log(await expect(this.successfullyMsg).toBeVisible());
+         |                                                        ^
+      49 |         await this.addEmpNationalityField.nth(0).click();
+      50 |         await this.addEmpNationalityselect.click();
+      51 |         await this.addEmpMaritalStatusField.nth(1).click();
 
-        at PIMPage.employeeListlandingTab (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:62:73)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:25:13
+        at PIMPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:48:56)
+        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:24:13
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results\PIMpage-Navigates-to-PIM-p-d582c-es-Schneider-Schneider-1209-chromium\test-failed-1.png
@@ -35,7 +38,6 @@
 </failure>
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
-[90mundefined[39m
 
 [[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-d582c-es-Schneider-Schneider-1209-chromium\test-failed-1.png]]
 
@@ -43,29 +45,32 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Navigates to PIM page › should allow to Add Employee Ronaldo,Gibbs,Gibbs,2309" classname="PIMpage.spec.js" time="150.318">
+<testcase name="Navigates to PIM page › should allow to Add Employee Ronaldo,Gibbs,Gibbs,2309" classname="PIMpage.spec.js" time="24.102">
 <failure message="PIMpage.spec.js:11:13 should allow to Add Employee Ronaldo,Gibbs,Gibbs,2309" type="FAILURE">
 <![CDATA[  [chromium] › PIMpage.spec.js:11:13 › Navigates to PIM page › should allow to Add Employee Ronaldo,Gibbs,Gibbs,2309 
 
-    Test timeout of 150000ms exceeded.
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
 
-    Error: locator.click: Test timeout of 150000ms exceeded.
+    Locator: getByText('SuccessSuccessfully Saved×')
+    Expected: visible
+    Received: <element(s) not found>
     Call log:
-      - waiting for getByRole('option', { name: 'Ronaldo' }).nth(1)
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByText('SuccessSuccessfully Saved×')
 
 
-       at ..\pages\pimpage.page.js:62
+       at ..\pages\pimpage.page.js:48
 
-      60 |         await this.listEmpNavTab.nth(1).click();
-      61 |         await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
-    > 62 |         await this.page.getByRole('option', { name: firstName }).nth(1).click();
-         |                                                                         ^
-      63 |         await this.page.waitForTimeout(2000);
-      64 |         await this.listEmpSearchbtn.click();
-      65 |         await this.page.waitForTimeout(2000);
+      46 |             
+      47 |         }).toPass();
+    > 48 |         console.log(await expect(this.successfullyMsg).toBeVisible());
+         |                                                        ^
+      49 |         await this.addEmpNationalityField.nth(0).click();
+      50 |         await this.addEmpNationalityselect.click();
+      51 |         await this.addEmpMaritalStatusField.nth(1).click();
 
-        at PIMPage.employeeListlandingTab (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:62:73)
-        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:25:13
+        at PIMPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:48:56)
+        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:24:13
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results\PIMpage-Navigates-to-PIM-p-6c2f8-ee-Ronaldo-Gibbs-Gibbs-2309-chromium\test-failed-1.png
@@ -78,7 +83,6 @@
 </failure>
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
-[90mundefined[39m
 
 [[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6c2f8-ee-Ronaldo-Gibbs-Gibbs-2309-chromium\test-failed-1.png]]
 
@@ -86,23 +90,85 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Navigates to PIM page › should allow to Add Employee Jose,Realonda,Realonda,1083" classname="PIMpage.spec.js" time="56.233">
+<testcase name="Navigates to PIM page › should allow to Add Employee Jose,Realonda,Realonda,1083" classname="PIMpage.spec.js" time="23.681">
+<failure message="PIMpage.spec.js:11:13 should allow to Add Employee Jose,Realonda,Realonda,1083" type="FAILURE">
+<![CDATA[  [chromium] › PIMpage.spec.js:11:13 › Navigates to PIM page › should allow to Add Employee Jose,Realonda,Realonda,1083 
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: getByText('SuccessSuccessfully Saved×')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByText('SuccessSuccessfully Saved×')
+
+
+       at ..\pages\pimpage.page.js:48
+
+      46 |             
+      47 |         }).toPass();
+    > 48 |         console.log(await expect(this.successfullyMsg).toBeVisible());
+         |                                                        ^
+      49 |         await this.addEmpNationalityField.nth(0).click();
+      50 |         await this.addEmpNationalityselect.click();
+      51 |         await this.addEmpMaritalStatusField.nth(1).click();
+
+        at PIMPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:48:56)
+        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:24:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
-[90mundefined[39m
 
-[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\test-failed-1.png]]
 
 [[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-6ab17-Jose-Realonda-Realonda-1083-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Navigates to PIM page › should allow to Add Employee Andy,lau,lau,1283" classname="PIMpage.spec.js" time="55.049">
+<testcase name="Navigates to PIM page › should allow to Add Employee Andy,lau,lau,1283" classname="PIMpage.spec.js" time="22.56">
+<failure message="PIMpage.spec.js:11:13 should allow to Add Employee Andy,lau,lau,1283" type="FAILURE">
+<![CDATA[  [chromium] › PIMpage.spec.js:11:13 › Navigates to PIM page › should allow to Add Employee Andy,lau,lau,1283 
+
+    Error: expect(locator).toBeVisible()
+
+    Locator: getByText('SuccessSuccessfully Saved×')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByText('SuccessSuccessfully Saved×')
+
+
+       at ..\pages\pimpage.page.js:48
+
+      46 |             
+      47 |         }).toPass();
+    > 48 |         console.log(await expect(this.successfullyMsg).toBeVisible());
+         |                                                        ^
+      49 |         await this.addEmpNationalityField.nth(0).click();
+      50 |         await this.addEmpNationalityselect.click();
+      51 |         await this.addEmpMaritalStatusField.nth(1).click();
+
+        at PIMPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\pages\pimpage.page.js:48:56)
+        at C:\Users\Kc Cabelin\Desktop\open-hrm-playwright-Automation\tests\PIMpage.spec.js:24:13
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\PIMpage-Navigates-to-PIM-p-de0dd--Employee-Andy-lau-lau-1283-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[getByTitle('OrangeHRM')
-[90mundefined[39m
-
-[[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-de0dd--Employee-Andy-lau-lau-1283-chromium\test-finished-1.png]]
 
 [[ATTACHMENT|..\test-results\PIMpage-Navigates-to-PIM-p-de0dd--Employee-Andy-lau-lau-1283-chromium\video.webm]]
 ]]>

@@ -22,6 +22,7 @@ exports.PIMPage = class PIMPage{
         this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
         this.listEmpNavTab = page.locator('.oxd-topbar-body-nav-tab');
         this.listEmployeeName = page.locator('.oxd-autocomplete-text-input');
+        this.listEmployeeNameSelect = page.locator('oxd-autocomplete-dropdown');
         this.listEmpSearchbtn = page.locator('//button[@type="submit"]');
         this.editEmplistbtn = page.locator('.oxd-icon-button');
         this.emplistdisplayTable = page.locator('.oxd-table.orangehrm-employee-list');
@@ -55,7 +56,7 @@ exports.PIMPage = class PIMPage{
 
     }
     async employeeListlandingTab(firstName){
-        const listofEmpnames = page.locator('.oxd-autocomplete-text-input');
+        
 
         // for(const Empnames of listofEmpnames.getByRole('option', { name: firstName }).all()) {
         //     await this.page.getByRole('option', { name: firstName }).nth(1).click();
@@ -64,15 +65,15 @@ exports.PIMPage = class PIMPage{
         await this.page.waitForTimeout(2000);
         await this.listEmpNavTab.nth(1).click();
         await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
-        for(let i = 0; i < listofEmpnames; i++){
-            const listofEmpnames = this.page.getByRole('option', { name: firstName }).nth(i).textContent();
-            if(await this.listofEmpnames.toBeVisible()){
-                await this.page.getByRole('option', { name: firstName }).nth(i).click();
+        const Empnames = this.listEmployeeNameSelect.getByRole('option', { name: firstName }).textContent();
+        for(let i = 0; i < Empnames; i++){
+            if(await Empnames.toBeVisible()){
+                await Empnames.nth(i).click();
             }
         }
         await this.page.waitForTimeout(2000);
         await this.listEmpSearchbtn.click();
-        await this.page.waitForTimeout(2000);
+        // await this.page.waitForTimeout(2000);
         await expect(async () =>{
             await this.editEmplistbtn.nth(3).click({timeout: 1000});
         }).toPass();
