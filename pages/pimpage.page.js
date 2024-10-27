@@ -56,24 +56,18 @@ exports.PIMPage = class PIMPage{
 
     }
     async employeeListlandingTab(firstName){
-        
 
-        // for(const Empnames of listofEmpnames.getByRole('option', { name: firstName }).all()) {
-        //     await this.page.getByRole('option', { name: firstName }).nth(1).click();
-        // }
         await this.pimmenu.nth(1).click();
         await this.page.waitForTimeout(2000);
         await this.listEmpNavTab.nth(1).click();
         await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
-        const Empnames = this.listEmployeeNameSelect.getByRole('option', { name: firstName }).textContent();
+        const Empnames = this.listEmployeeNameSelect.getByRole('option', { name: firstName });
         for(let i = 0; i < Empnames; i++){
             if(await Empnames.toBeVisible()){
                 await Empnames.nth(i).click();
             }
         }
-        await this.page.waitForTimeout(2000);
         await this.listEmpSearchbtn.click();
-        // await this.page.waitForTimeout(2000);
         await expect(async () =>{
             await this.editEmplistbtn.nth(3).click({timeout: 1000});
         }).toPass();
