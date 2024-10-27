@@ -48,7 +48,12 @@ constructor(page){
   async createNewEmployeeInputTextFields(EmpName, UserName, Password, ConfirmPassword){
     // await this.userStatus.nth(1).selectOption('Enabled');
     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    await this.userEmpNameSelect.getByRole('option', { name: EmpName }).nth(0).click();
+    const EmpList = this.userEmpNameSelect.getByRole('option', { name: EmpName })
+    for(let x = 0; x < EmpList; x ++){
+        if(await EmpList.toBeVisible()){
+          await EmpList.nth(x).click();
+        }
+    }
     await this.username.nth(1).fill(UserName);
     await this.password.nth(2).fill(Password);
     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
