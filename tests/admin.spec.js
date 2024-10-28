@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { AdminPage } = require('../pages/adminpage.page');
 const { LoginPage } = require('../pages/loginpage.page');
+const { EditAdminPage } = require('../pages/editadminpage.page');
 const dataSetCreateAdmin = JSON.parse(JSON.stringify(require("../utils/adminTestData.json")));
 const dataSetRoleAndStatus = JSON.parse(JSON.stringify(require("../utils/adminroleandstatusTestData.json")));
 
@@ -21,9 +22,11 @@ test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
              await adminpage.selectUserRoleAndUserStatus();
              await adminpage.createNewEmployeeInputTextFields(createdata.EmpName, createdata.UserName,createdata.Password,createdata.ConfirmPassword);
              await adminpage.clickSavebtn();
+             await loginpage.clicklogoutBtn();
                         
             })
       }
+        
 });
 
 

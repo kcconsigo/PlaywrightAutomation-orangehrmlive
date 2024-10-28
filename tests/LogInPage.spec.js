@@ -25,7 +25,8 @@ test.describe('Allow user login page', {tag: '@SmokeTesting'}, () => {
         await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
         await loginpage.loginCreds(positveDataSet.username, positveDataSet.password)
         await loginpage.clickLoginBtn()
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(1000);
+        await loginpage.clicklogoutBtn();
        
     });
     test('should not be able to login when user enters invalid credentials', async ({ page })=>{

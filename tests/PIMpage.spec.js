@@ -23,6 +23,7 @@ test.describe('Navigates to PIM page', {tag:'@Regressiontesting'}, async () => {
             await pimpage.addEmpTab();
             await pimpage.addEmployeeDetails(dataPIM.firstName, dataPIM.middleName, dataPIM.lastName, dataPIM.empID);
             await pimpage.employeeListlandingTab(dataPIM.firstName);
+            await loginpage.clicklogoutBtn();
             // // await pimpage.employeeListdisplayTable();
             // await pimpage.editemployeeList();
     

@@ -22,6 +22,22 @@ constructor(page){
     this.submitBtbnSave = page.locator('//button[@type="submit"]');
     this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
     this.adminList = page.locator('.oxd-table-body');
+    this.systemUser = page.locator('.oxd-input.oxd-input');
+    this.systemUserSearchbtn = page.locator('//button[normalize-space()="Search"]');
+    this.systemUserEditInfobtn = page.locator('//div[@class="orangehrm-paper-container"]//button[2]');
+    this.userRoleSelectOptionsEditInfo = page.locator('.oxd-select-text');
+    this.userRoleFieldEditInfo = page.locator('//div[@role="listbox"]//span[contains(text(),"ESS")]');
+    this.usernameEditInfo = page.locator('.oxd-input.oxd-input');
+    this.usernameEditInfoSavebtn = page.locator('//button[normalize-space()="Save"]');
+    this.successfullyEditInfoMsg = page.getByText('SuccessSuccessfully Updated×');
+    this.scolldownInfo = page.locator('.orangehrm-container');
+    this.userDeleteInfo = page.locator('.oxd-checkbox-wrapper');
+    this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
+    this.userDeletebtn = page.locator('//div[@class="orangehrm-container"]//button[1]');
+    this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
+    this.userDeleteDialogbtn = page.locator('//button[normalize-space()="Yes, Delete"]');
+    this.successfullyDeletedUser = page.getByText('SuccessSuccessfully Deleted×');
+    this.NorecordsFound = page.getByText('InfoNo Records Found×');
 
   }
   async AdminTab(){
@@ -57,6 +73,7 @@ constructor(page){
 
     await this.page.waitForTimeout(1000);
   }
+
   // async verifyAdmin(UserName){
   //   // await page.getByTestId('scrolling-container').hover();
   //   // await page.mouse.wheel(5, 10);
