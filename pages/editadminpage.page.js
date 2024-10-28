@@ -21,7 +21,6 @@ exports.EditAdminPage = class EditAdminPage{
         this.userDeleteInfo = page.locator('.oxd-checkbox-wrapper');
         this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
         this.userDeletebtn = page.locator('//div[@class="orangehrm-container"]//button[1]');
-        this.userDeleteDialogbox = page.locator('.oxd-sheet.oxd-sheet--rounded.oxd-sheet--white.oxd-dialog-sheet');
         this.userDeleteDialogbtn = page.locator('//button[normalize-space()="Yes, Delete"]');
         this.successfullyDeletedUser = page.getByText('SuccessSuccessfully Deleted×');
         this.NorecordsFound = page.getByText('InfoNo Records Found×');
@@ -33,9 +32,9 @@ exports.EditAdminPage = class EditAdminPage{
         await this.page.waitForTimeout(2000);
     }
 
-    async systemuserFilter(){
+    async systemuserFilter(EditUserName){
         await this.systemUser.nth(1).click();
-        await this.systemUser.nth(1).fill('Ronaldo Valdez');
+        await this.systemUser.nth(1).fill(EditUserName);
         await this.systemUserSearchbtn.click();
     }
 
@@ -52,15 +51,19 @@ exports.EditAdminPage = class EditAdminPage{
         await this.scolldownInfo.scrollIntoViewIfNeeded();
         await this.page.waitForTimeout(2000);
     }
-    async deleteuserInfo(){
+    async deleteuserInfo(EditUserName){
         await this.systemUser.nth(1).click();
-        await this.systemUser.nth(1).fill('Ronaldo Valdez Gibbs');
+        await this.systemUser.nth(1).fill(EditUserName);
         await this.systemUserSearchbtn.click();
         await this.recordCheckbox.nth(1).click();
         await this.userDeleteInfo.nth(1).click();
         await this.userDeletebtn.click();
-        await this.page.waitForTimeout(5000);
+        await this.userDeleteDialogbox.waitFor();
         await this.userDeleteDialogbtn.click();
+        // Waits for either confirmation dialog or load spinner.
+// await page.locator(
+//     `//span[contains(@class, 'spinner__loading')]|//div[@id='confirmation']`
+// ).waitFor();
         console.log(await expect(this.successfullyDeletedUser).toBeVisible());
         console.log(await expect(this.NorecordsFound).toBeVisible());
 
