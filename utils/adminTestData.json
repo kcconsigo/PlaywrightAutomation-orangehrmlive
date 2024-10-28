@@ -21,15 +21,15 @@
     "password" : "admin123",
     "EmpName" : "Ronaldo Valdez Gibbs",
     "UserName" : "Yoo Nah",
-    "Password" : "P@$$w0rd$hit@ss", 
-    "ConfirmPassword" : "P@$$w0rd$hit@ss"
+    "Password" : "P@$$w0rd$hit@ss2", 
+    "ConfirmPassword" : "P@$$w0rd$hit@ss2"
 },
 {
     "username" : "Admin",
     "password" : "admin123",
     "EmpName" : "Ronaldo Valdez Gibbs",
     "UserName" : "Gabbi Garcia",
-    "Password" : "M@derfucker@$$", 
-    "ConfirmPassword" : "M@derfucker@$$"
+    "Password" : "M@derfucker@$$3", 
+    "ConfirmPassword" : "M@derfucker@$$3"
 }
 ]
