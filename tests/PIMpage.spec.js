@@ -12,9 +12,8 @@ test.describe('Navigates to PIM page', {tag:'@Regressiontesting'}, async () => {
 
             const loginpage = new LoginPage(page);
             await page.waitForTimeout(2000);
-            await loginpage.gotoLoginPage()
-            await loginpage.loginCreds(dataPIM.username, dataPIM.password)
-            await loginpage.clickLoginBtn()
+            await loginpage.gotoLoginPage();
+            await loginpage.loginCreds(dataPIM.username, dataPIM.password);
             await page.waitForTimeout(5000);
     
     
@@ -23,6 +22,7 @@ test.describe('Navigates to PIM page', {tag:'@Regressiontesting'}, async () => {
             await pimpage.addEmpTab();
             await pimpage.addEmployeeDetails(dataPIM.firstName, dataPIM.middleName, dataPIM.lastName, dataPIM.empID);
             await pimpage.employeeListlandingTab(dataPIM.firstName);
+            await loginpage.clickUserDropdown();
             await loginpage.clicklogoutBtn();
             // // await pimpage.employeeListdisplayTable();
             // await pimpage.editemployeeList();

@@ -23,9 +23,10 @@ test.describe('Allow user login page', {tag: '@SmokeTesting'}, () => {
         const loginpage = new LoginPage(page);
         await page.waitForTimeout(2000);
         await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
-        await loginpage.loginCreds(positveDataSet.username, positveDataSet.password)
-        await loginpage.clickLoginBtn()
+        await loginpage.loginCreds(positveDataSet.username, positveDataSet.password);
+        await loginpage.clickLoginBtn();
         await page.waitForTimeout(1000);
+        await loginpage.clickUserDropdown();
         await loginpage.clicklogoutBtn();
        
     });
@@ -34,9 +35,9 @@ test.describe('Allow user login page', {tag: '@SmokeTesting'}, () => {
       const invalidloginpage = new LoginPage(page);
       await page.waitForTimeout(2000);
       await invalidloginpage.gotoLoginPage(process.env.WEB_URL_QA);
-      await invalidloginpage.loginCreds(negativeDataSet.usernameInvalid, negativeDataSet.passwordInvalid)
-      await invalidloginpage.clickLoginBtn()
-      await invalidloginpage.validateInvalidMessage()
+      await invalidloginpage.loginCreds(negativeDataSet.usernameInvalid, negativeDataSet.passwordInvalid);
+      await invalidloginpage.clickLoginBtn();
+      await invalidloginpage.validateInvalidMessage();
       await page.waitForTimeout(5000);
       
   });

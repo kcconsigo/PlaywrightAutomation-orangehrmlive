@@ -13,7 +13,6 @@ test.describe('User configures Admin Information ', async () => {
         await page.waitForTimeout(2000);
         await loginpage.gotoLoginPage()
         await loginpage.loginCreds(dataEditAdmin.username,dataEditAdmin.password)
-        await loginpage.clickLoginBtn()
         await page.waitForTimeout(5000);    
 
         
@@ -24,6 +23,7 @@ test.describe('User configures Admin Information ', async () => {
         await editadmininfo.recordsfoundList();
         await editadmininfo.edituserInfoPage(dataEditAdmin.EditUserName);
         await editadmininfo.deleteuserInfo(dataEditAdmin.EditUserName);
+        await loginpage.clickUserDropdown();
         await loginpage.clicklogoutBtn();
     
             // await pimpage.closeBrowser();

@@ -22,6 +22,7 @@ test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
              await adminpage.selectUserRoleAndUserStatus();
              await adminpage.createNewEmployeeInputTextFields(createdata.EmpName, createdata.UserName,createdata.Password,createdata.ConfirmPassword);
              await adminpage.clickSavebtn();
+             await loginpage.clickUserDropdown();
              await loginpage.clicklogoutBtn();
                         
             })
