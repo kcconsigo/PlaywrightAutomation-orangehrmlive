@@ -12,16 +12,14 @@ constructor(page){
     this.empAddButton = page.locator('.oxd-button');
     this.userRoleSelectOptions = page.locator('.oxd-select-text');
     this.userRoleField = page.getByRole('option', { name: 'Admin' });
-    // this.userRoleSelectOptions = page.locator('');
     this.userStatus = page.locator('.oxd-select-text');
     this.userStatusField = page.getByRole('option', { name: 'Enabled' });
     this.userEmpName = page.locator('.oxd-autocomplete-text-input');
     this.userEmpNameSelect = page.locator('.oxd-autocomplete-dropdown');
-    // get placeholder text - Type for hints... await page.getByPlaceholder('Type for hints...').fill('Nhung  Dang');
     this.username = page.locator('.oxd-input.oxd-input');
     this.password = page.locator('.oxd-input.oxd-input');
     this.comfirmPassword = page.locator('.oxd-input.oxd-input');
-    this.submitBtbnSave = page.locator('//button[normalize-space()="Save"]');
+    this.submitBtbnSave = page.locator('//button[@type="submit"]');
     this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
     this.adminList = page.locator('.oxd-table-body');
 
@@ -48,23 +46,16 @@ constructor(page){
   async createNewEmployeeInputTextFields(EmpName, UserName, Password, ConfirmPassword){
     // await this.userStatus.nth(1).selectOption('Enabled');
     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
-    const EmpList = this.userEmpNameSelect.getByRole('option', { name: EmpName })
-    for(let x = 0; x < EmpList; x ++){
-        if(await EmpList.toBeVisible()){
-          await EmpList.nth(x).click();
-        }
-    }
+    await this.userEmpNameSelect.getByRole('option', { name: EmpName }).click();
     await this.username.nth(1).fill(UserName);
     await this.password.nth(2).fill(Password);
     await this.comfirmPassword.nth(3).fill(ConfirmPassword);
   }
   async clickSavebtn(){
-    await expect(async () => {
-      await this.submitBtbnSave.nth(0).click();
-      console.log(await expect(this.successfullyMsg).toBeVisible({timeout: 500}));
-    }).toPass();
+    await this.submitBtbnSave.nth(0).click();
+    console.log(await this.successfullyMsg.textContent());
 
-    //await this.page.waitForTimeout(5000);
+    await this.page.waitForTimeout(1000);
   }
   // async verifyAdmin(UserName){
   //   // await page.getByTestId('scrolling-container').hover();
