@@ -16,7 +16,7 @@ test.beforeEach('Orange live demo app', async ({page}) => {
 //     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 // })
 
-test.describe('Allow user login page', {tag: '@SmokeTesting'}, () => {
+test.describe('Allow user login page', {tag: '@SanityTesting'}, () => {
     test('should be able to login when user enters valid credentials', async ({ page })=>{
 
 
@@ -25,7 +25,7 @@ test.describe('Allow user login page', {tag: '@SmokeTesting'}, () => {
         await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
         await loginpage.loginCreds(positveDataSet.username, positveDataSet.password);
         await loginpage.clickLoginBtn();
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(3000);
         await loginpage.clickUserDropdown();
         await loginpage.clicklogoutBtn();
        
