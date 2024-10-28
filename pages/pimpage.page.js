@@ -68,10 +68,7 @@ exports.PIMPage = class PIMPage{
             }
         }
         await this.listEmpSearchbtn.click();
-        await expect(async () =>{
-            await this.editEmplistbtn.nth(3).click({timeout: 1000});
-        }).toPass();
-
+        await this.editEmplistbtn.nth(3).click();
     }
 
 }
