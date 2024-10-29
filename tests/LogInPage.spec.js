@@ -8,10 +8,8 @@ const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidlogin
 
 test.beforeEach('Orange live demo app', async ({page}) => {
 
-
   await page.goto('https://www.google.com/');
 });
-
 // test.describe('navigate hr demo login', async ({ page })=>{
 //     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 // })

@@ -8,13 +8,14 @@ const dataSetPIM = JSON.parse(JSON.stringify(require("../utils/PIMTestData.json"
 test.describe('Navigates to PIM page', {tag:'@Regressiontesting'}, async () => {
     for(const dataPIM of dataSetPIM)
         {
-            test(`should allow to Add Employee ${dataPIM.firstName},${dataPIM.lastName},${dataPIM.lastName},${dataPIM.empID}`, {tag: '@EndtoEndTesting'}, async ({ page })=> {
+            test(`should allow to Add Employee ${dataPIM.firstName},${dataPIM.lastName},${dataPIM.lastName},${dataPIM.empID}`, async ({ page })=> {
 
             const loginpage = new LoginPage(page);
             await page.waitForTimeout(2000);
             await loginpage.gotoLoginPage();
             await loginpage.loginCreds(dataPIM.username, dataPIM.password);
-            await page.waitForTimeout(5000);
+            await loginpage.clickLoginBtn();
+            await page.waitForTimeout(3000);
     
     
             const pimpage = new PIMPage(page);
