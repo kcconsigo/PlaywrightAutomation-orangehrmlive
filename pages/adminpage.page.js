@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+const { text } = require('stream/consumers');
 
 exports.AdminPage = class AdminPage{
        /**
@@ -62,6 +63,16 @@ constructor(page){
   async createNewEmployeeInputTextFields(EmpName, UserName, Password, ConfirmPassword){
     // await this.userStatus.nth(1).selectOption('Enabled');
     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
+    const EmpNameSelectList = this.userEmpNameSelect.getByRole('option', { name: EmpName });
+    for(let i = 0; i < EmpNameSelectList; ++i )
+    {
+      text = await thisuserEmpNameSelect.nth(i).textContent();
+      if(text === EmpNameSelectList)
+      {
+        await this.EmpNameSelectList.nth(i).click();
+        break;
+      }
+    }
     await this.userEmpNameSelect.getByRole('option', { name: EmpName }).click();
     await this.username.nth(1).fill(UserName);
     await this.password.nth(2).fill(Password);
