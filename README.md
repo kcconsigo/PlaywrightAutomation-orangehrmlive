@@ -17,7 +17,7 @@ GitHub as for code repository(also planning to add to bitbucket)
 
 I've also added my project to my Bitbucket repository : https://bitbucket.org/testautomationframework1/orangehrmlive_testautomation/src/main/
 
-CI - GitHub actions via yaml 
+CI - GitHub actions via yml 
 
 CICD - Jenkins, CircleCI 
 
@@ -43,9 +43,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 
-Monitoring and Logs - Grafana Dashbaord
+Monitoring and Logs - Grafana Dashbaord (Planning to Integrate)
 
-Docker Containerization for the orchestration.
+Docker Containerization for the orchestration and dockerize my automation framework.
 
 **Clone Project** : **https://github.com/kcconsigo/PlaywrightAutomation-orangehrmlive.git**
 
