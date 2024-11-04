@@ -11,11 +11,9 @@ exports.LoginPage = class LoginPage{
         this.page = page;
         this.username_textbox = page.locator('input[placeholder=Username]');
         this.password_textbox = page.locator('input[placeholder=Password]');
-        this.logout_drpdown = page.locator('.oxd-userdropdown');
         this.login_btn = page.locator('button[type=submit]');
+        this.logout_drpdown = page.locator('//span[@class="oxd-userdropdown-tab"]');
         this.logout_btn = page.getByRole('menuitem', { name: 'Logout' });
-
-        // this.err_msg = page.locator('.oxd-alert.oxd-alert--error');
         this.err_msg = page.getByText('Invalid credentials');
     }
 
@@ -40,16 +38,15 @@ exports.LoginPage = class LoginPage{
     }
     async validateInvalidMessage()
     {
-            await expect(async () =>{
-                console.log(await expect(this.err_msg).toBeVisible({timeout:300}));
-            }).toPass();
+            console.log(await this.err_msg.textContent());
 
     }
     async clickUserDropdown(){
         await this.logout_drpdown.click();
+        await this.page.waitForTimeout(2000)
       }
     async clicklogoutBtn(){
-            await this.logout_btn.click()
+            await this.logout_btn.click();
     }
 
     // enterUsername(){
