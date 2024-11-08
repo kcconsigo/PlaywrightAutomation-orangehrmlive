@@ -2,7 +2,10 @@
   "name": "open-hrm-playwright-automation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression": "npx playwright test @Regressiontesting PIMpage.spec.js --headed",
+    "sanity": "npx playwright test @SanityTesting LogInPage.spec.js --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,6 +19,8 @@
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
     "cucumber-html-reporter": "^6.0.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "install": "^0.13.0"
   }
 }
