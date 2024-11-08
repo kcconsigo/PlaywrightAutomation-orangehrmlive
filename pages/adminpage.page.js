@@ -85,6 +85,36 @@ constructor(page){
     await this.page.waitForTimeout(1000);
   }
 
+  async loadingSpinner(){
+    await expect(async () => {
+      const webLoadingSpinnerLocator = this.page.locator('.oxd-loading-spinner-container');
+      await webLoadingSpinnerLocator.waitFor();
+
+    }).toPass();
+
+
+            // Waits for either confirmation dialog or load spinner.
+// await page.locator(
+//     `//span[contains(@class, 'spinner__loading')]|//div[@id='confirmation']`
+// ).waitFor();
+  }
+
+  async checkAdmin(UserName){
+    const checkAdmin = this.page.locator('//div[@role="row"]//ancestor::div[contains(text(),'+UserName+')]');
+    for(let i = 0; i<await checkAdmin.count(); i++)
+    {
+      const rowadminName = await checkAdmin.nth(i).textContent();
+      if(checkAdmin.isVisible(rowadminName))
+      {
+        await checkAdmin.nth(i).locator('button').click();
+        break;
+      }
+    }
+
+  }
+
+  
+
   // async verifyAdmin(UserName){
   //   // await page.getByTestId('scrolling-container').hover();
   //   // await page.mouse.wheel(5, 10);
