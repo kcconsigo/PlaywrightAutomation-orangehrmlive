@@ -49,6 +49,10 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+        launchOptions: {
+      // 1
+      args: ["--window-size=4920,4040"],
+    },
   },
 
   /* Configure projects for major browsers */
