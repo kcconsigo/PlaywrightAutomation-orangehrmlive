@@ -14,7 +14,8 @@
     "@playwright/test": "^1.48.1",
     "@types/node": "^22.7.5",
     "allure-commandline": "^2.30.0",
-    "allure-playwright": "^3.0.5"
+    "allure-playwright": "^3.0.5",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
