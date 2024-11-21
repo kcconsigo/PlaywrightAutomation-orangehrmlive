@@ -1,5 +1,4 @@
 const { expect } = require('@playwright/test');
-// const { chromium } = require('@playwright/test');
 const { Console } = require('console');
 
 exports.LoginPage = class LoginPage{
@@ -13,7 +12,7 @@ exports.LoginPage = class LoginPage{
         this.password_textbox = page.locator('input[placeholder=Password]');
         this.login_btn = page.locator('button[type=submit]');
         this.logout_drpdown = page.locator('//span[@class="oxd-userdropdown-tab"]');
-        this.logout_btn = page.getByRole('menuitem', { name: 'Logout' });
+        this.logout_btn = page.locator('//a[normalize-space()="Logout"]');
         this.err_msg = page.getByText('Invalid credentials');
     }
 

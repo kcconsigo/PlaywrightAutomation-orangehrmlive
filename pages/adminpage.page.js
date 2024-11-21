@@ -2,7 +2,7 @@ const { expect } = require('@playwright/test');
 const { text } = require('stream/consumers');
 
 exports.AdminPage = class AdminPage{
-       /**
+   /**
    * @param {import('@playwright/test').Page} page
    */
 constructor(page){
