@@ -7,6 +7,10 @@ const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidlogin
 
 
 test.beforeEach('Orange live demo app', async ({page}) => {
+  // const browser=  await chromium.launch({ headless: false,
+  //   args:['--window-size=4920,4040']});
+  //   const context= await browser.newContext({ viewport: null });
+  //   const page = await context.newPage();
 
   await page.goto('https://www.google.com/');
 });
@@ -16,7 +20,6 @@ test.beforeEach('Orange live demo app', async ({page}) => {
 
 test.describe('Allow user login page', {tag: '@SanityTesting'}, () => {
     test('should be able to login when user enters valid credentials', async ({ page })=>{
-
 
         const loginpage = new LoginPage(page);
         await page.waitForTimeout(2000);
