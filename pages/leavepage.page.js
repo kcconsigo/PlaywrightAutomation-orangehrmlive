@@ -9,7 +9,7 @@ exports.LeavePage = class LeavePage{
     this.page = page;
 
     this.leavemenu = page.locator(".oxd-main-menu-item");
-    this.leaveEntitlementTab = page.locator('//span[normalize-space()="Entitlements"]');
+    this.leaveEntitlementTab = page.locator('li');
     this.leaveEmpEntitlement = page.locator('li');
     this.leaveEmpNameEntitlement = page.locator('.oxd-autocomplete-text-input');
     this.leaveEmpNameSearchBtton = page.locator('//button[normalize-space()="Search"]');
@@ -21,7 +21,7 @@ exports.LeavePage = class LeavePage{
   }
 
   async entitlementTab(firstName){
-    await this.leaveEntitlementTab.click();
+    await this.leaveEntitlementTab.filter({ hasText: 'Entitlements' }).click();
     await this.leaveEmpEntitlement.filter({ hasText: /^Employee Entitlements$/ }).click();
     await this.page.waitForTimeout(2000);
     // await expect(async () =>{
