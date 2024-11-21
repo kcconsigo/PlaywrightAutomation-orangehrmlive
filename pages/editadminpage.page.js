@@ -48,7 +48,6 @@ exports.EditAdminPage = class EditAdminPage{
         await this.usernameEditInfo.nth(1).fill(EditUserName);
         await this.usernameEditInfoSavebtn.click();
         console.log(await this.successfullyEditInfoMsg.textContent());
-        await this.scolldownInfo.scrollIntoViewIfNeeded();
         await this.page.waitForTimeout(2000);
     }
     async deleteuserInfo(EditUserName){
