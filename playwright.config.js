@@ -51,7 +51,7 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
         launchOptions: {
       // 1
-      args: ["--window-size=4920,4040"],
+      args: ["--window-size=4930,4080"],
     },
   },
 
