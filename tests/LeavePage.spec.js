@@ -3,6 +3,7 @@ const { LoginPage } = require('../pages/loginpage.page');
 const { LeavePage } = require('../pages/leavepage.page');
 
 const dataLeave = JSON.parse(JSON.stringify(require("../utils/leaveTestData.json")));
+const leaveType = JSON.parse(JSON.stringify(require("../utils/leaveTypeTestData.json")));
 
 
 test('Should allow an Employee to have leave entitlements', async({ page }) => {
@@ -19,4 +20,5 @@ test('Should allow an Employee to have leave entitlements', async({ page }) => {
         await leavepage.leaveTab();
         await page.waitForTimeout(3000);
         await leavepage.entitlementTab(dataLeave.firstName);
+        await leavepage.addleaveentitlmentPage(dataLeave.firstName);
 })
