@@ -24,6 +24,7 @@ test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
              await adminpage.clickSavebtn();
              await adminpage.loadingSpinner();
              await page.waitForTimeout(2000);
+             await adminpage.checkAdmin(UserName);
              await loginpage.clickUserDropdown();
              await loginpage.clicklogoutBtn();
              await page.waitForTimeout(5000);
