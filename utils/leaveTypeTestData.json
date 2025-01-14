@@ -1,0 +1,28 @@
+[
+
+    {
+        "CAN_Bereavement":"CAN - Bereavement"
+    },
+    {
+        "CAN_Matternity":"CAN - Matternity"
+    },
+    {
+        "CAN_Personal":"CAN - Personal"
+    },
+    {
+        "CAN_Vacation":"CAN - Vacation"
+    },
+    {
+        "US_Bereavement":"US - Bereavement"
+    },
+    {
+
+        "US_Matternity":"US - Matternity"
+    },
+    {
+        "US_Personal":"US - Personal"
+    },
+    {
+        "US_Vacation":"US - Vacation"
+    }
+]
