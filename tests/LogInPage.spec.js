@@ -25,7 +25,6 @@ test.describe('Allow user login page', {tag: '@SanityTesting'}, () => {
         await loginpage.gotoLoginPage(process.env.WEB_URL_QA);
         await loginpage.loginCreds(positveDataSet.username, positveDataSet.password);
         await loginpage.clickLoginBtn();
-        // await page.waitForTimeout(3000);
         await loginpage.clickUserDropdown();
         await loginpage.clicklogoutBtn();
        

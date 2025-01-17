@@ -1,22 +1,25 @@
-const {Give, When, And, Then} = require('@cucumber/cucumber');
-const { test, expect } = require('@playwright/test');
+const {Given, When, And, Then} = require('@cucumber/cucumber');
+const { expect } = require('@playwright/test');
+const { LoginPage } = require('../../pages/loginpage.page');
+const playwright = require('@playwright/test');
 
-Given('I am on the login page', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Given('I am on the login page', {timeout: 100*1000}, async function () {
+  const browser = await playwright.chromium.launch({ headless: false });
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  this.loginpage = new LoginPage(page);
+  await this.loginpage.gotoLoginPage();
   });
 
-When('I enter my {username} and {password}', function (username, password) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+When('I enter my {string} and {string}', async function (username, password) {
+  await this.loginpage.loginCreds(username, password);
   });
 
-When('I click the login button', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+When('I click the Login button', async function () {
+  await this.loginpage.clickLoginBtn();
   });
 
-  Then('I should be logged in', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Then('I should be logged in', async function () {
+  await this.loginpage.clickUserDropdown();
+  await this.loginpage.clicklogoutBtn();
   });
