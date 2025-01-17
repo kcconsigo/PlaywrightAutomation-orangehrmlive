@@ -21,7 +21,7 @@ exports.LoginPage = class LoginPage{
         // const browser = await chromium.launch();
         // const page = await browser.newPage();
         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-        const titlePage = await this.page.getByTitle('OrangeHRM');
+        const titlePage = this.page.getByTitle('OrangeHRM');
         console.log(titlePage);
         //await this.browser.close();
     }

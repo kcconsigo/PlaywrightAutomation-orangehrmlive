@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 90
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
@@ -17,11 +17,11 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test @SanityTesting LogInPage.spec --headed
+    - name: Run npx cucumber-js
+      run: npx cucumber-js @E2Etesting --exit
     - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
         path: playwright-report/
-        retention-days: 30
+        retention-days: 45
