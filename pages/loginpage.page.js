@@ -33,6 +33,7 @@ exports.LoginPage = class LoginPage{
     }
     async clickLoginBtn(){
             await this.login_btn.click();
+            await this.page.waitForTimeout(3000);
         
     }
     async validateInvalidMessage()
