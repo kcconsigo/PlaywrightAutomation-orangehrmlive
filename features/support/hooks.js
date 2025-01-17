@@ -12,7 +12,7 @@ Before(async function () {
   await this.loginpage.gotoLoginPage();
 });
 
-BeforeStep({tags: "@foo"}, function () {
+BeforeStep({tags: "@E2Etesting"}, function () {
   // This hook will be executed before all steps in a scenario with tag @foo
 });
 
