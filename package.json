@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "regression": "npx playwright test @Regressiontesting PIMpage.spec.js --headed",
-    "sanity": "npx playwright test @SanityTesting LogInPage.spec.js --headed"
+    "sanity": "npx playwright test @SanityTesting LogInPage.spec.js --headed",
+    "cucumberE2ETesting": "npx cucumber-js features/Login.feature --tags @E2Etesting --exit --format html:cucumber-report.html"
   },
   "keywords": [],
   "author": "",
