@@ -7,6 +7,11 @@ This automation framework adds **Admin** and **Employee**, Edit Employee's Infor
 ![Dashboard](https://github.com/user-attachments/assets/a9c494c4-1396-4f6f-9878-ce933a0839a5)
 ![LoginPage](https://github.com/user-attachments/assets/a5419d6b-53d7-4ac3-a52e-3d893ac8a1a8)
 
+**Cucumber HTML Report for Login Page**
+![image](https://github.com/user-attachments/assets/fef328a6-f2ed-4516-ad6e-d60c506c42e4)
+![image](https://github.com/user-attachments/assets/05ae1af9-1826-4b98-a0dc-a15ef3875f04)
+![image](https://github.com/user-attachments/assets/dab924bb-7b7e-4313-849f-b739de8bec01)
+
 
 
 Technology Stacks used: VS Code for IDE 
