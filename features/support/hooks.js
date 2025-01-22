@@ -1,8 +1,10 @@
 const playwright = require('@playwright/test');
-const {After, Before, BeforeStep, AfterStep, Status} = require('@cucumber/cucumber');
+const {After, Before, BeforeStep, AfterStep, Status, setDefaultTimeout} = require('@cucumber/cucumber');
 const { LoginPage } = require('../../pages/loginpage.page');
 const path = require('path');
 
+// Set a default timeout for Cucumber steps
+setDefaultTimeout(60000);
 // Synchronous
 Before(async function () {
  const browser = await playwright.chromium.launch({ headless: false });

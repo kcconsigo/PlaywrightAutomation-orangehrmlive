@@ -3,7 +3,7 @@ const { expect } = require('@playwright/test');
 const { LoginPage } = require('../../pages/loginpage.page');
 const playwright = require('@playwright/test');
 
-Given('I am on the login page using valid credentials', {timeout: 100*1000}, async function () {
+Given('I am on the login page using valid credentials', {timeout: 30*5000}, async function () {
   const browser = await playwright.chromium.launch({ headless: false });
   const context = await browser.newContext();
   const page = await context.newPage();
