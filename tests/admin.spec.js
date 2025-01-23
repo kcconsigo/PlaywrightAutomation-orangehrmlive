@@ -15,7 +15,6 @@ test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
              await loginpage.gotoLoginPage();
              await loginpage.loginCreds(createdata.username,createdata.password);
              await loginpage.clickLoginBtn();
-             await page.waitForTimeout(5000);
                         
              const adminpage = new AdminPage(page);
              await adminpage.AdminTab();
@@ -23,12 +22,9 @@ test.describe('User Creates Admin ', {tag: '@Sanitytesting'}, async () => {
              await adminpage.createNewEmployeeInputTextFields(createdata.EmpName, createdata.UserName,createdata.Password,createdata.ConfirmPassword);
              await adminpage.clickSavebtn();
              await adminpage.loadingSpinner();
-             await page.waitForTimeout(2000);
              await adminpage.checkAdmin(UserName);
              await loginpage.clickUserDropdown();
-             await loginpage.clicklogoutBtn();
-             await page.waitForTimeout(5000);
-                        
+             await loginpage.clicklogoutBtn();      
             })
       }
         

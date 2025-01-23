@@ -89,6 +89,7 @@ constructor(page){
     await expect(async () => {
       const webLoadingSpinnerLocator = this.page.locator('.oxd-loading-spinner-container');
       await webLoadingSpinnerLocator.waitFor();
+      await this.page.waitForTimeout(2000);
 
     }).toPass();
 
