@@ -7,8 +7,6 @@ exports.AdminPage = class AdminPage{
    */
 constructor(page){
     this.page = page;
-    
-    
     this.adminmenu = page.locator(".oxd-main-menu-item");
     this.empAddButton = page.locator('.oxd-button');
     this.userRoleSelectOptions = page.locator('.oxd-select-text');
@@ -45,10 +43,8 @@ constructor(page){
     await this.adminmenu.nth(0).click();
     await this.empAddButton.nth(2).click();
     await this.page.waitForTimeout(500);
-    
   }
   async selectUserRoleAndUserStatus(){
-    
     await this.userRoleSelectOptions.nth(0).click();
     await this.page.waitForTimeout(3000);
     // await this.userRoleSelectOptions.nth(0).getByText('Admin').click();
@@ -61,7 +57,6 @@ constructor(page){
   }
 
   async createNewEmployeeInputTextFields(EmpName, UserName, Password, ConfirmPassword){
-    // await this.userStatus.nth(1).selectOption('Enabled');
     await this.userEmpName.getByPlaceholder('Type for hints...').fill(EmpName);
     const EmpNameSelectList = this.userEmpNameSelect.getByRole('option', { name: EmpName });
     for(let i = 0; i < EmpNameSelectList; ++i )
