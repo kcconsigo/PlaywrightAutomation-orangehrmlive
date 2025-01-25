@@ -1,6 +1,6 @@
 @E2Etesting @Regressiontesting
 @ValidLogin
-Feature: Login page
+Feature: Verify Login page using valid credentials and invalid credentials
         As an Admin user
         I want to login to the page using valid credentials and invalid credentials
 Background:
