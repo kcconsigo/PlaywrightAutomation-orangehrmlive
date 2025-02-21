@@ -11,8 +11,8 @@ Given('I am on the login page using invalid credentials', {timeout: 30*5000}, as
   await this.invalidloginpage.gotoLoginPage();
   });
 
-When('I enter my {string} and {string} invalid credentials', async function (usernameInvalid, invalidpassword) {
-  await this.invalidloginpage.loginCreds(usernameInvalid, invalidpassword);
+When('I enter my {string} and {string} invalid credentials', async function (usernameInvalid, passwordInvalid) {
+  await this.invalidloginpage.userLoginCreds(usernameInvalid, passwordInvalid);
   });
 
 When('I click the Login button with invalid credentials', async function () {
@@ -22,3 +22,6 @@ When('I click the Login button with invalid credentials', async function () {
 Then('I should not be login and should see {string} error message', async function (string) {
   await this.invalidloginpage.validateInvalidMessage();
   });
+When('Admin enters my {string} and {string} valid credentials', (s, s2) => {
+  // Write code here that turns the phrase above into concrete actions
+})

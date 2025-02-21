@@ -12,7 +12,7 @@ Given('I am on the login page using valid credentials', {timeout: 30*5000}, asyn
   });
 
 When('I enter my {string} and {string} valid credentials', async function (username, password) {
-  await this.loginpage.loginCreds(username, password);
+  await this.loginpage.userLoginCreds(username, password);
   });
 
 When('I click the Login button with valid credentials', async function () {
