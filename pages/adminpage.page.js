@@ -47,8 +47,6 @@ constructor(page){
   async selectUserRoleAndUserStatus(){
     await this.userRoleSelectOptions.nth(0).click();
     await this.page.waitForTimeout(3000);
-    // await this.userRoleSelectOptions.nth(0).getByText('Admin').click();
-    //await this.userRoleField.nth(0).selectOption({label: 'Admin'});
     await this.userRoleField.click();
     await this.page.waitForTimeout(3000);
     await this.userStatus.nth(1).click();
@@ -88,11 +86,6 @@ constructor(page){
 
     }).toPass();
 
-
-            // Waits for either confirmation dialog or load spinner.
-// await page.locator(
-//     `//span[contains(@class, 'spinner__loading')]|//div[@id='confirmation']`
-// ).waitFor();
   }
 
   async checkAdmin(UserName){
@@ -108,25 +101,5 @@ constructor(page){
     }
 
   }
-
-  
-
-  // async verifyAdmin(UserName){
-  //   // await page.getByTestId('scrolling-container').hover();
-  //   // await page.mouse.wheel(5, 10);
-  //   // await this.scolldownAdminInfo.scrollIntoViewIfNeeded();
-  //   const adminNameList = this.adminList;
-  //   const adminAddedNameList = this.page.locator('//div[contains(text(),'+UserName+')]');
-  //   for(let i = 0; i<await adminNameList.count(); i++)
-  //   {
-  //     const rowadminName = await adminNameList.nth(i).textContent();
-  //     if(adminAddedNameList.isVisible(rowadminName))
-  //     {
-  //         await adminNameList.nth(i).locator("button").click();
-  //         break;
-  //     }
-  //   }
-  //   await this.page.waitForTimeout(5000);
-  // }
 
 }
