@@ -12,7 +12,7 @@ Given('I am on the login page using invalid credentials', {timeout: 30*5000}, as
   });
 
 When('I enter my {string} and {string} invalid credentials', async function (usernameInvalid, passwordInvalid) {
-  await this.invalidloginpage.userLoginCreds(usernameInvalid, passwordInvalid);
+  await this.invalidloginpage.loginCreds(usernameInvalid, passwordInvalid);
   });
 
 When('I click the Login button with invalid credentials', async function () {
