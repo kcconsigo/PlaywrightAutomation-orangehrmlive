@@ -12,14 +12,22 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.48.1",
+    "@serenity-js/console-reporter": "^3.31.13",
+    "@serenity-js/core": "^3.31.13",
+    "@serenity-js/cucumber": "^3.31.13",
+    "@serenity-js/playwright": "^3.31.13",
+    "@serenity-js/playwright-test": "^3.31.13",
+    "@serenity-js/rest": "^3.31.13",
+    "@serenity-js/serenity-bdd": "^3.31.13",
+    "@serenity-js/web": "^3.31.13",
     "@types/node": "^22.7.5",
     "allure-commandline": "^2.30.0",
     "allure-playwright": "^3.0.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^11.0.1",
     "cucumber-html-reporter": "^6.0.0",
     "dotenv": "^16.4.5",
     "exceljs": "^4.4.0",
