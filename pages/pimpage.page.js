@@ -46,19 +46,15 @@ exports.PIMPage = class PIMPage{
             await this.addEmpbuttonSave.click({timeout: 1000});
             
         }).toPass();
-        console.log(await expect(this.successfullyMsg).toBeVisible());
+        await expect(this.successfullyMsg).toBeVisible();
         await this.addEmpNationalityField.nth(0).click();
         await this.addEmpNationalityselect.click();
         await this.addEmpMaritalStatusField.nth(1).click();
         await this.addEmpMaritalStatusSelect.click();
         await this.addEmpInfoSave.nth(1).click();
-        await this.page.waitForTimeout(2000);
-
     }
     async employeeListlandingTab(firstName){
-
         await this.pimmenu.nth(1).click();
-        await this.page.waitForTimeout(2000);
         await this.listEmpNavTab.nth(1).click();
         await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
         const Empnames = this.listEmployeeNameSelect.getByRole('option', { name: firstName });
