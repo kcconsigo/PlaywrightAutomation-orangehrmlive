@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Playwright tests
-      run: npx playwright test @Regressiontesting PIMpage.spec.js --headed
+      run: npx playwright test @SanityTesting LogInPage.spec.js --headed
     - uses: actions/upload-artifact@v4
       if: ${{ !success() }}
       with:
