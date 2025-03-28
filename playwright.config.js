@@ -1,8 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
 const { chromium } = require('playwright');  // Or 'firefox' or 'webkit'.
-
 (async () => {
   const browser = await chromium.launch({
     logger: {
@@ -60,6 +58,7 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'], user: 'Admin', password:'admin123', env_var: process.env.ENVVAR },
+      
     },
 
     // {
