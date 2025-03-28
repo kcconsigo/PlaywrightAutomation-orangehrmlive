@@ -7,16 +7,8 @@ const negativeDataSet = JSON.parse(JSON.stringify(require("../utils/invalidlogin
 
 
 test.beforeEach('Orange live demo app', async ({page}) => {
-  // const browser=  await chromium.launch({ headless: false,
-  //   args:['--window-size=4920,4040']});
-  //   const context= await browser.newContext({ viewport: null });
-  //   const page = await context.newPage();
-
   await page.goto('https://www.google.com/');
 });
-// test.describe('navigate hr demo login', async ({ page })=>{
-//     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-// })
 
 test.describe('Allow user login page', {tag: '@SanityTesting'}, () => {
     test('should be able to login when user enters valid credentials', async ({ page })=>{
